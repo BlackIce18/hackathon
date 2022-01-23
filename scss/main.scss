@@ -1,0 +1,133 @@
+@import "reset";
+
+.firstScreen {
+    position: relative;
+    height: 100vh;
+
+    .backgroundImageBlock {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        overflow: hidden;
+
+        .colorImage {
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            background-color: rgba(175,34,34,0.3);
+            position: absolute;
+        }
+
+        .backgroundImage {
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        .mask {
+            width: 100%;
+            position: absolute;
+            bottom: -5px;
+
+            img {
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .logoAndText {
+        position: absolute;
+        top: 150px;
+        left: 100px;
+
+        .logo {
+            width: 450px;
+            margin: 0 auto 30px auto;
+        }
+
+        .title {
+            width: 600px;
+            font: 800 54px 'Roboto';
+            color: #fff;
+        }
+
+        .subtitle {
+            width: 600px;
+            font: 36px 'Roboto';
+            color: #fff;
+        }
+    }
+
+    .phoneBlock {
+        width: 1000px;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+    }
+
+    .downloadApp {
+        position: absolute;
+        right: 200px;
+        bottom: 150px;
+
+        a {
+            width: 250px;
+            display: inline-block;
+
+            &:first-child {
+                margin-right: 30px;
+            }
+
+            img {
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-device-width: 1367px) and (max-device-width: 1601px) {
+    .firstScreen {
+        .phoneBlock {
+            width: 700px;
+        }
+
+        .downloadApp {
+            right: 100px;
+
+            a {
+                width: 175px;
+            }
+        }
+
+        .logoAndText {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+
+            .logo {
+                width: 450px;
+                margin: 0 auto 30px auto;
+            }
+
+            .title {
+                width: 600px;
+                font: 800 36px 'Roboto';
+                color: #fff;
+            }
+
+            .subtitle {
+                width: 600px;
+                font: 28px 'Roboto';
+                color: #fff;
+            }
+        }
+    }
+}
