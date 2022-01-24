@@ -1,14 +1,18 @@
 @import "reset";
 
+.screen {
+    height: 100vh;
+}
+
 .firstScreen {
     position: relative;
-    height: 100vh;
 
     .backgroundImageBlock {
         width: 100%;
         height: 100vh;
         position: absolute;
         overflow: hidden;
+        z-index: -1;
 
         .colorImage {
             width: 100%;
@@ -16,6 +20,7 @@
             min-height: 100%;
             background-color: rgba(175,34,34,0.3);
             position: absolute;
+            z-index: 100;
         }
 
         .backgroundImage {
@@ -27,6 +32,7 @@
             width: 100%;
             position: absolute;
             bottom: -5px;
+            z-index: 101;
 
             img {
                 min-width: 100%;
@@ -36,9 +42,8 @@
     }
 
     .logoAndText {
-        position: absolute;
-        top: 150px;
-        left: 100px;
+        padding-top: 150px;
+        padding-left: 100px;
 
         .logo {
             width: 450px;
@@ -72,6 +77,24 @@
 
     }
 
+    .downloadAppMobile {
+        display: none;
+
+        a {
+            width: 250px;
+            display: inline-block;
+
+            &:first-child {
+                margin-right: 30px;
+            }
+
+            img {
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
     .downloadApp {
         position: absolute;
         right: 200px;
@@ -97,6 +120,7 @@
     .firstScreen {
         .phoneBlock {
             width: 700px;
+            left: 55%;
         }
 
         .downloadApp {
@@ -108,9 +132,8 @@
         }
 
         .logoAndText {
-            position: absolute;
-            top: 100px;
-            left: 100px;
+            padding-top: 100px;
+            padding-left: 100px;
 
             .logo {
                 width: 450px;
@@ -128,6 +151,193 @@
                 font: 28px 'Roboto';
                 color: #fff;
             }
+        }
+    }
+}
+
+@media screen and (min-device-width: 1280px) and (max-device-width: 1365px) {
+    .firstScreen {
+        .phoneBlock {
+            width: 700px;
+            left: 55%;
+        }
+
+        .downloadApp {
+            right: 100px;
+
+            a {
+                width: 175px;
+            }
+        }
+
+        .logoAndText {
+            padding-top: 100px;
+            padding-left: 100px;
+
+            .logo {
+                width: 450px;
+                margin: 0 auto 30px auto;
+            }
+
+            .title {
+                width: 600px;
+                font: 800 36px 'Roboto';
+                color: #fff;
+            }
+
+            .subtitle {
+                width: 600px;
+                font: 28px 'Roboto';
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1279px) {
+    .firstScreen {
+        .phoneBlock {
+            display: none;
+        }
+
+        .downloadApp {
+            right: auto;
+            left: 100px;
+            bottom: 200px;
+
+            a {
+                width: 175px;
+            }
+        }
+
+        .logoAndText {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+
+            .logo {
+                width: 350px;
+                margin: 0 auto 30px auto;
+            }
+
+            .title {
+                width: 500px;
+                font: 800 32px 'Roboto';
+                color: #fff;
+            }
+
+            .subtitle {
+                width: 500px;
+                font: 24px 'Roboto';
+                color: #fff;
+                margin-bottom: 40px;
+            }
+        }
+
+        .downloadAppMobile {
+            display: block;
+        }
+
+        .downloadApp {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+    .firstScreen {
+        .phoneBlock {
+            display: none;
+        }
+
+        .downloadApp {
+            right: auto;
+            left: 100px;
+            bottom: 200px;
+
+            a {
+                width: 175px;
+            }
+        }
+
+        .logoAndText {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+
+            .logo {
+                width: 250px;
+                margin: 0 auto 30px auto;
+            }
+
+            .title {
+                width: 500px;
+                font: 800 32px 'Roboto';
+                color: #fff;
+            }
+
+            .subtitle {
+                width: 500px;
+                font: 24px 'Roboto';
+                color: #fff;
+            }
+        }
+
+        .downloadAppMobile {
+            display: block;
+        }
+
+        .downloadApp {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .firstScreen {
+        .phoneBlock {
+            display: none;
+        }
+
+        .downloadApp {
+            right: auto;
+            left: 100px;
+            bottom: 200px;
+
+            a {
+                width: 175px;
+            }
+        }
+
+        .logoAndText {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+
+            .logo {
+                width: 250px;
+                margin: 0 auto 30px auto;
+            }
+
+            .title {
+                width: 500px;
+                font: 800 32px 'Roboto';
+                color: #fff;
+            }
+
+            .subtitle {
+                width: 500px;
+                font: 24px 'Roboto';
+                color: #fff;
+            }
+        }
+
+        .downloadAppMobile {
+            display: block;
+        }
+
+        .downloadApp {
+            display: none;
         }
     }
 }
