@@ -248,6 +248,22 @@ $dark: #272727;
             }
         }
     }
+
+    .secondScreen {
+        .content {
+            .mainContent {
+                padding: 50px 0;
+
+                .text {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .screenTitle {
+                font: 800 36px "Roboto";
+            }
+        }
+    }
 }
 
 @media screen and (min-device-width: 1280px) and (max-device-width: 1365px) {
@@ -284,6 +300,33 @@ $dark: #272727;
                 width: 600px;
                 font: 28px 'Roboto';
                 color: #fff;
+            }
+        }
+    }
+
+    .secondScreen {
+        .content {
+            .mainContent {
+                padding: 50px 0;
+
+                .text {
+                    font: 24px 'Roboto';
+                    margin-bottom: 30px;
+                }
+
+                .circleWithImage {
+                    width: 150px;
+                    height: 150px;
+
+                    img {
+                        min-width: 100px;
+                        max-width: 100px;
+                    }
+                }
+            }
+
+            .screenTitle {
+                font: 800 36px "Roboto";
             }
         }
     }
@@ -337,6 +380,37 @@ $dark: #272727;
             display: none;
         }
     }
+
+    .secondScreen {
+        .backgroundDecorations .backgroundCircle {
+            width: 150px;
+            height: 150px;
+        }
+        .content {
+            .mainContent {
+                padding: 50px 0;
+
+                .text {
+                    font: 24px 'Roboto';
+                    margin-bottom: 30px;
+                }
+
+                .circleWithImage {
+                    width: 150px;
+                    height: 150px;
+
+                    img {
+                        min-width: 100px;
+                        max-width: 100px;
+                    }
+                }
+            }
+
+            .screenTitle {
+                font: 800 36px "Roboto";
+            }
+        }
+    }
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
@@ -386,6 +460,41 @@ $dark: #272727;
             display: none;
         }
     }
+
+    .secondScreen {
+        .backgroundDecorations .backgroundCircle {
+            width: 150px;
+            height: 150px;
+        }
+
+        .content {
+            .screenTitle {
+                margin: 60px 0 30px 0;
+            }
+            .mainContent {
+                padding: 30px 0;
+
+                .text {
+                    font: 24px 'Roboto';
+                    margin-bottom: 30px;
+                }
+
+                .circleWithImage {
+                    width: 150px;
+                    height: 150px;
+
+                    img {
+                        min-width: 100px;
+                        max-width: 100px;
+                    }
+                }
+            }
+
+            .screenTitle {
+                font: 800 36px "Roboto";
+            }
+        }
+    }
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) {
@@ -433,6 +542,41 @@ $dark: #272727;
 
         .downloadApp {
             display: none;
+        }
+    }
+
+    .secondScreen {
+        .backgroundDecorations .backgroundCircle {
+            width: 150px;
+            height: 150px;
+        }
+
+        .content {
+            .screenTitle {
+                margin: 60px 0 30px 0;
+            }
+            .mainContent {
+                padding: 30px 0;
+
+                .text {
+                    font: 24px 'Roboto';
+                    margin-bottom: 30px;
+                }
+
+                .circleWithImage {
+                    width: 150px;
+                    height: 150px;
+
+                    img {
+                        min-width: 100px;
+                        max-width: 100px;
+                    }
+                }
+            }
+
+            .screenTitle {
+                font: 800 36px "Roboto";
+            }
         }
     }
 }

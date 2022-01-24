@@ -203,6 +203,16 @@
     font: 28px "Roboto";
     color: #fff;
   }
+
+  .secondScreen .content .mainContent {
+    padding: 50px 0;
+  }
+  .secondScreen .content .mainContent .text {
+    margin-bottom: 30px;
+  }
+  .secondScreen .content .screenTitle {
+    font: 800 36px "Roboto";
+  }
 }
 @media screen and (min-device-width: 1280px) and (max-device-width: 1365px) {
   .firstScreen .phoneBlock {
@@ -232,6 +242,25 @@
     width: 600px;
     font: 28px "Roboto";
     color: #fff;
+  }
+
+  .secondScreen .content .mainContent {
+    padding: 50px 0;
+  }
+  .secondScreen .content .mainContent .text {
+    font: 24px "Roboto";
+    margin-bottom: 30px;
+  }
+  .secondScreen .content .mainContent .circleWithImage {
+    width: 150px;
+    height: 150px;
+  }
+  .secondScreen .content .mainContent .circleWithImage img {
+    min-width: 100px;
+    max-width: 100px;
+  }
+  .secondScreen .content .screenTitle {
+    font: 800 36px "Roboto";
   }
 }
 @media screen and (min-device-width: 1024px) and (max-device-width: 1279px) {
@@ -272,6 +301,29 @@
   .firstScreen .downloadApp {
     display: none;
   }
+
+  .secondScreen .backgroundDecorations .backgroundCircle {
+    width: 150px;
+    height: 150px;
+  }
+  .secondScreen .content .mainContent {
+    padding: 50px 0;
+  }
+  .secondScreen .content .mainContent .text {
+    font: 24px "Roboto";
+    margin-bottom: 30px;
+  }
+  .secondScreen .content .mainContent .circleWithImage {
+    width: 150px;
+    height: 150px;
+  }
+  .secondScreen .content .mainContent .circleWithImage img {
+    min-width: 100px;
+    max-width: 100px;
+  }
+  .secondScreen .content .screenTitle {
+    font: 800 36px "Roboto";
+  }
 }
 @media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
   .firstScreen .phoneBlock {
@@ -310,6 +362,32 @@
   .firstScreen .downloadApp {
     display: none;
   }
+
+  .secondScreen .backgroundDecorations .backgroundCircle {
+    width: 150px;
+    height: 150px;
+  }
+  .secondScreen .content .screenTitle {
+    margin: 60px 0 30px 0;
+  }
+  .secondScreen .content .mainContent {
+    padding: 30px 0;
+  }
+  .secondScreen .content .mainContent .text {
+    font: 24px "Roboto";
+    margin-bottom: 30px;
+  }
+  .secondScreen .content .mainContent .circleWithImage {
+    width: 150px;
+    height: 150px;
+  }
+  .secondScreen .content .mainContent .circleWithImage img {
+    min-width: 100px;
+    max-width: 100px;
+  }
+  .secondScreen .content .screenTitle {
+    font: 800 36px "Roboto";
+  }
 }
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .firstScreen .phoneBlock {
@@ -347,5 +425,31 @@
   }
   .firstScreen .downloadApp {
     display: none;
+  }
+
+  .secondScreen .backgroundDecorations .backgroundCircle {
+    width: 150px;
+    height: 150px;
+  }
+  .secondScreen .content .screenTitle {
+    margin: 60px 0 30px 0;
+  }
+  .secondScreen .content .mainContent {
+    padding: 30px 0;
+  }
+  .secondScreen .content .mainContent .text {
+    font: 24px "Roboto";
+    margin-bottom: 30px;
+  }
+  .secondScreen .content .mainContent .circleWithImage {
+    width: 150px;
+    height: 150px;
+  }
+  .secondScreen .content .mainContent .circleWithImage img {
+    min-width: 100px;
+    max-width: 100px;
+  }
+  .secondScreen .content .screenTitle {
+    font: 800 36px "Roboto";
   }
 }
