@@ -6,7 +6,8 @@
   "dependencies": {
     "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
-    "locomotive-scroll": "^4.1.3"
+    "locomotive-scroll": "^4.1.3",
+    "popmotion": "^11.0.3"
   },
   "devDependencies": {
     "gulp-sass": "^5.1.0",

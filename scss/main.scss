@@ -1,7 +1,16 @@
 @import "reset";
 
+$title: 800 54px 'Roboto';
+$red: #c91a03;
+$coral: #f7533d;
+$dark: #272727;
+
 .screen {
     height: 100vh;
+}
+
+.pp-section {
+    top: 0;
 }
 
 .firstScreen {
@@ -52,7 +61,7 @@
 
         .title {
             width: 600px;
-            font: 800 54px 'Roboto';
+            font: $title;
             color: #fff;
         }
 
@@ -111,6 +120,92 @@
             img {
                 min-width: 100%;
                 max-width: 100%;
+            }
+        }
+    }
+}
+
+.secondScreen {
+    .backgroundDecorations {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+
+        .backgroundLine {
+            width: 30px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            background: linear-gradient(180deg, $red, $coral);
+        }
+
+        .backgroundCircle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(270deg, $red, $coral);
+            position: absolute;
+            top: -50px;
+            right: -50px;
+        }
+    }
+
+    .content {
+        padding: 0 50px;
+
+        .screenTitle {
+            font: $title;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .mainContent {
+            padding: 100px 0;
+
+            .number {
+                color: $red;
+                font: 800 48px 'Roboto';
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .text  {
+                text-align: center;
+                font: 28px 'Roboto';
+                height: 80px;
+            }
+
+            .circleWithImage {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: $coral;
+                box-shadow: 0 0 5px $dark;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+
+                img {
+                    min-width: 125px;
+                    max-width: 125px;
+
+                }
+            }
+        }
+
+        .firstCol, .secondCol, .thirdCol, .fourthCol {
+            .number, .text {
+                opacity: 0;
+                transform: translateY(-20px);
+                transition: transform 1s ease-in-out;
+            }
+
+            .circleWithImage {
+                opacity: 0;
+                transform: scale(0) translateY(50px);
+                transition: 1s ease-in-out;
             }
         }
     }

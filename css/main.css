@@ -8,6 +8,10 @@
   height: 100vh;
 }
 
+.pp-section {
+  top: 0;
+}
+
 .firstScreen {
   position: relative;
 }
@@ -98,6 +102,76 @@
 .firstScreen .downloadApp a img {
   min-width: 100%;
   max-width: 100%;
+}
+
+.secondScreen .backgroundDecorations {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+.secondScreen .backgroundDecorations .backgroundLine {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: linear-gradient(180deg, #c91a03, #f7533d);
+}
+.secondScreen .backgroundDecorations .backgroundCircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(270deg, #c91a03, #f7533d);
+  position: absolute;
+  top: -50px;
+  right: -50px;
+}
+.secondScreen .content {
+  padding: 0 50px;
+}
+.secondScreen .content .screenTitle {
+  font: 800 54px "Roboto";
+  text-align: center;
+  margin: 60px 0;
+}
+.secondScreen .content .mainContent {
+  padding: 100px 0;
+}
+.secondScreen .content .mainContent .number {
+  color: #c91a03;
+  font: 800 48px "Roboto";
+  text-align: center;
+  margin-bottom: 20px;
+}
+.secondScreen .content .mainContent .text {
+  text-align: center;
+  font: 28px "Roboto";
+  height: 80px;
+}
+.secondScreen .content .mainContent .circleWithImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #f7533d;
+  box-shadow: 0 0 5px #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.secondScreen .content .mainContent .circleWithImage img {
+  min-width: 125px;
+  max-width: 125px;
+}
+.secondScreen .content .firstCol .number, .secondScreen .content .firstCol .text, .secondScreen .content .secondCol .number, .secondScreen .content .secondCol .text, .secondScreen .content .thirdCol .number, .secondScreen .content .thirdCol .text, .secondScreen .content .fourthCol .number, .secondScreen .content .fourthCol .text {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: transform 1s ease-in-out;
+}
+.secondScreen .content .firstCol .circleWithImage, .secondScreen .content .secondCol .circleWithImage, .secondScreen .content .thirdCol .circleWithImage, .secondScreen .content .fourthCol .circleWithImage {
+  opacity: 0;
+  transform: scale(0) translateY(50px);
+  transition: 1s ease-in-out;
 }
 
 @media screen and (min-device-width: 1367px) and (max-device-width: 1601px) {
