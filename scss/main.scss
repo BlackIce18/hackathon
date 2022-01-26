@@ -2,11 +2,14 @@
 
 $title: 800 54px 'Roboto';
 $red: #c91a03;
+$yellow: #F7AD3D;
+$green: #80B808;
 $coral: #f7533d;
 $dark: #272727;
 
 .screen {
     height: 100vh;
+    background: #ffffff;
 }
 
 .pp-section {
@@ -208,6 +211,176 @@ $dark: #272727;
                 transition: 1s ease-in-out;
             }
         }
+    }
+}
+
+.thirdScreen, .fourthScreen, .fifthScreen {
+    .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .SliderNavigation {
+            width: 500px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 50px;
+        }
+
+        .screenTitle {
+            width: 500px;
+            font: 800 54px "Roboto";
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .sliderNav {
+            width: 125px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .navItems {
+                width: 100px;
+                height: 100px;
+                background: #eeeeee;
+                border-radius: 50%;
+                font: 800 48px "Roboto";
+                color: #bebebe;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 25px;
+                cursor: pointer;
+                opacity: 0;
+                transition: 0.25s ease-in-out;
+
+                p {
+                    margin: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        line-height: 100px;
+                        color: #ffffff;
+                        text-decoration: none;
+                    }
+                }
+
+                &:hover {
+                    background: #f7533dA0;
+
+                    p {
+                        color: #fff;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &.activeNavItem {
+                    background: $coral;
+                    color: #ffffff;
+                    width: 125px;
+                    height: 125px;
+                    box-shadow: 0 0 10px $coral;
+
+                    p {
+                        a {
+                            line-height: 125px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slider {
+            width: 830px;
+            height: 830px;
+            border: 15px solid $coral;
+            border-radius: 50px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            box-shadow: 0 8px 10px rgba(0,0,0,0.25);
+            transition: 1s ease-in-out;
+            transform: scale(0);
+
+            .sliderWrapper {
+                width: 100%;
+                position: absolute;
+            }
+
+            &.red {
+                border-color: $coral;
+            }
+            &.yellow {
+                border-color: $yellow;
+            }
+            &.green {
+                border-color: $green;
+            }
+
+            .slide {
+                height: 800px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                opacity: 0;
+                padding: 20px;
+                overflow: hidden;
+
+                p {
+                    text-align: center;
+                    font: 48px 'Roboto';
+                    color: $dark;
+                    margin-bottom: 0;
+                }
+
+                .imageWrapper {
+                    width: 600px;
+                    height: 600px;
+                    margin: 0 100px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        min-width: 100%;
+                        max-width: 100%;
+                    }
+                }
+
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.sixthScreen {
+    .carousel-cell {
+        margin-right: 20px;
+        overflow: hidden;
+    }
+
+    .carousel-cell img {
+        display: block;
+        height: 200px;
     }
 }
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../../../../xampp/php" />
+    </include_path>
+  </component>
+  <component name="PhpProjectServersManager">
+    <servers>
+      <server host="localhost" id="39f9c329-33dc-4acb-8e80-7741047a7005" name="Unnamed" port="8080" />
+    </servers>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+</project>

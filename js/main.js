@@ -2,6 +2,7 @@ $(document).ready(function() {
     Parallax();
 
     ScrollOneWindow();
+    Carousel();
 });
 
 function Parallax() {
@@ -15,7 +16,7 @@ function ScrollOneWindow() {
         direction: 'vertical',
         verticalCentered: false,
         sectionsColor: [],
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
         scrollingSpeed: 700,
         easing: 'swing',
         loopBottom: false,
@@ -56,6 +57,15 @@ function ScrollOneWindow() {
                     "transform":"scale(0) translateY(50px)"
                 });
             }
+            if(index == 3) {
+                /*$('.thirdScreen > .content > .slider').css({"transform":"scale(0)"});*/
+            }
+            if(index == 4) {
+                /*$('.fourthScreen > .content > .slider').css({"transform":"scale(0)"});*/
+            }
+            if(index == 5) {
+                /*$('.fifthScreen > .content > .slider').css({"transform":"scale(0)"});*/
+            }
         },
         afterLoad: function(anchorLink, index){
                 //using index
@@ -84,7 +94,53 @@ function ScrollOneWindow() {
                         "transform":"scale(1) translateY(0px)"
                     });
                 }
+
+            if(anchorLink == "thirdPage") {
+                $('.thirdScreen > .content > .slider').css({"transform":"scale(1)"});
+                $('.thirdScreen > .content > .SliderNavigation > .sliderNav > .activeNavItem').animate({
+                    opacity: 1,
+                }, 1000, function(){
+                    $('.thirdScreen > .content > .SliderNavigation > .sliderNav > .navItems').animate({
+                        opacity: 1,
+                    }, 250);
+                }).css({"transform":"scale(1)"});
+            }
+
+            if(anchorLink == "fourthPage") {
+                $('.fourthScreen > .content > .slider').css({"transform":"scale(1)"});
+                $('.fourthScreen > .content > .SliderNavigation > .sliderNav > .navItems').css({"opacity":"1"})
+            }
+
+            if(anchorLink == "fifthPage") {
+                $('.fifthScreen > .content > .slider').css({"transform":"scale(1)"});
+                $('.fifthScreen > .content > .SliderNavigation > .sliderNav > .navItems').css({"opacity":"1"})
+            }
         },
         afterRender: function(){},
+    });
+}
+
+function Carousel() {
+    var carousel = document.querySelector('.carousel');
+    var flkty = new Flickity( carousel, {
+        prevNextButtons: false,
+        autoPlay: 1500,
+        imagesLoaded: true,
+        percentPosition: false,
+        fade: true
+    });
+
+    var imgs = carousel.querySelectorAll('.carousel-cell img');
+// get transform property
+    var docStyle = document.documentElement.style;
+    var transformProp = typeof docStyle.transform == 'string' ?
+        'transform' : 'WebkitTransform';
+
+    flkty.on( 'scroll', function() {
+        flkty.slides.forEach( function( slide, i ) {
+            var img = imgs[i];
+            var x = ( slide.target + flkty.x ) * -1/3;
+            img.style[ transformProp ] = 'translateX(' + x  + 'px)';
+        });
     });
 }

@@ -6,6 +6,7 @@
 
 .screen {
   height: 100vh;
+  background: #ffffff;
 }
 
 .pp-section {
@@ -172,6 +173,149 @@
   opacity: 0;
   transform: scale(0) translateY(50px);
   transition: 1s ease-in-out;
+}
+
+.thirdScreen .content, .fourthScreen .content, .fifthScreen .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.thirdScreen .content .SliderNavigation, .fourthScreen .content .SliderNavigation, .fifthScreen .content .SliderNavigation {
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px;
+}
+.thirdScreen .content .screenTitle, .fourthScreen .content .screenTitle, .fifthScreen .content .screenTitle {
+  width: 500px;
+  font: 800 54px "Roboto";
+  text-align: center;
+  margin-bottom: 50px;
+}
+.thirdScreen .content .sliderNav, .fourthScreen .content .sliderNav, .fifthScreen .content .sliderNav {
+  width: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thirdScreen .content .sliderNav .navItems, .fourthScreen .content .sliderNav .navItems, .fifthScreen .content .sliderNav .navItems {
+  width: 100px;
+  height: 100px;
+  background: #eeeeee;
+  border-radius: 50%;
+  font: 800 48px "Roboto";
+  color: #bebebe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.25s ease-in-out;
+}
+.thirdScreen .content .sliderNav .navItems p, .fourthScreen .content .sliderNav .navItems p, .fifthScreen .content .sliderNav .navItems p {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thirdScreen .content .sliderNav .navItems p a, .fourthScreen .content .sliderNav .navItems p a, .fifthScreen .content .sliderNav .navItems p a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.thirdScreen .content .sliderNav .navItems:hover, .fourthScreen .content .sliderNav .navItems:hover, .fifthScreen .content .sliderNav .navItems:hover {
+  background: #f7533dA0;
+}
+.thirdScreen .content .sliderNav .navItems:hover p, .fourthScreen .content .sliderNav .navItems:hover p, .fifthScreen .content .sliderNav .navItems:hover p {
+  color: #fff;
+}
+.thirdScreen .content .sliderNav .navItems:last-child, .fourthScreen .content .sliderNav .navItems:last-child, .fifthScreen .content .sliderNav .navItems:last-child {
+  margin-bottom: 0;
+}
+.thirdScreen .content .sliderNav .navItems.activeNavItem, .fourthScreen .content .sliderNav .navItems.activeNavItem, .fifthScreen .content .sliderNav .navItems.activeNavItem {
+  background: #f7533d;
+  color: #ffffff;
+  width: 125px;
+  height: 125px;
+  box-shadow: 0 0 10px #f7533d;
+}
+.thirdScreen .content .sliderNav .navItems.activeNavItem p a, .fourthScreen .content .sliderNav .navItems.activeNavItem p a, .fifthScreen .content .sliderNav .navItems.activeNavItem p a {
+  line-height: 125px;
+}
+.thirdScreen .content .slider, .fourthScreen .content .slider, .fifthScreen .content .slider {
+  width: 830px;
+  height: 830px;
+  border: 15px solid #f7533d;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
+  transition: 1s ease-in-out;
+  transform: scale(0);
+}
+.thirdScreen .content .slider .sliderWrapper, .fourthScreen .content .slider .sliderWrapper, .fifthScreen .content .slider .sliderWrapper {
+  width: 100%;
+  position: absolute;
+}
+.thirdScreen .content .slider.red, .fourthScreen .content .slider.red, .fifthScreen .content .slider.red {
+  border-color: #f7533d;
+}
+.thirdScreen .content .slider.yellow, .fourthScreen .content .slider.yellow, .fifthScreen .content .slider.yellow {
+  border-color: #F7AD3D;
+}
+.thirdScreen .content .slider.green, .fourthScreen .content .slider.green, .fifthScreen .content .slider.green {
+  border-color: #80B808;
+}
+.thirdScreen .content .slider .slide, .fourthScreen .content .slider .slide, .fifthScreen .content .slider .slide {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+.thirdScreen .content .slider .slide p, .fourthScreen .content .slider .slide p, .fifthScreen .content .slider .slide p {
+  text-align: center;
+  font: 48px "Roboto";
+  color: #272727;
+  margin-bottom: 0;
+}
+.thirdScreen .content .slider .slide .imageWrapper, .fourthScreen .content .slider .slide .imageWrapper, .fifthScreen .content .slider .slide .imageWrapper {
+  width: 600px;
+  height: 600px;
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.thirdScreen .content .slider .slide .imageWrapper img, .fourthScreen .content .slider .slide .imageWrapper img, .fifthScreen .content .slider .slide .imageWrapper img {
+  min-width: 100%;
+  max-width: 100%;
+}
+.thirdScreen .content .slider .slide.active, .fourthScreen .content .slider .slide.active, .fifthScreen .content .slider .slide.active {
+  opacity: 1;
+}
+
+.sixthScreen .carousel-cell {
+  margin-right: 20px;
+  overflow: hidden;
+}
+.sixthScreen .carousel-cell img {
+  display: block;
+  height: 200px;
 }
 
 @media screen and (min-device-width: 1367px) and (max-device-width: 1601px) {
