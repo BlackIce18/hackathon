@@ -6,7 +6,7 @@
 
 .screen {
   height: 100vh;
-  background: #ffffff;
+  background: #fff;
 }
 
 .pp-section {
@@ -48,6 +48,10 @@
 .firstScreen .logoAndText {
   padding-top: 150px;
   padding-left: 100px;
+}
+.firstScreen .logoAndText a {
+  width: 450px;
+  height: 200px;
 }
 .firstScreen .logoAndText .logo {
   width: 450px;
@@ -309,22 +313,290 @@
   opacity: 1;
 }
 
-.sixthScreen .carousel-cell {
-  margin-right: 20px;
-  overflow: hidden;
+.sixthScreen .content, .eighthScreen .content {
+  padding: 0 50px;
 }
-.sixthScreen .carousel-cell img {
+.sixthScreen .content .screenTitle, .eighthScreen .content .screenTitle {
+  font: 800 54px "Roboto";
+  text-align: center;
+  margin: 60px 0;
+}
+.sixthScreen .content .carouselAndListBlock, .eighthScreen .content .carouselAndListBlock {
+  display: flex;
+  flex-direction: row;
+  /*align-items: center;*/
+}
+.sixthScreen .content .carouselAndListBlock .carouselWrapper, .eighthScreen .content .carouselAndListBlock .carouselWrapper {
+  display: flex;
+  align-items: center;
+}
+.sixthScreen .content .carouselAndListBlock .carouselWrapper .applicationNumber, .eighthScreen .content .carouselAndListBlock .carouselWrapper .applicationNumber {
+  color: #272727;
+  font: 24px "Roboto";
+  text-align: center;
+  margin: 10px 0;
+}
+.sixthScreen .content .carouselAndListBlock .decorationLine, .eighthScreen .content .carouselAndListBlock .decorationLine {
+  width: 20px;
+  position: relative;
+  margin: 0 30px;
+}
+.sixthScreen .content .carouselAndListBlock .decorationLine.red .line, .sixthScreen .content .carouselAndListBlock .decorationLine.red .circle, .eighthScreen .content .carouselAndListBlock .decorationLine.red .line, .eighthScreen .content .carouselAndListBlock .decorationLine.red .circle {
+  background: #f7533d;
+}
+.sixthScreen .content .carouselAndListBlock .decorationLine.green .line, .sixthScreen .content .carouselAndListBlock .decorationLine.green .circle, .eighthScreen .content .carouselAndListBlock .decorationLine.green .line, .eighthScreen .content .carouselAndListBlock .decorationLine.green .circle {
+  background: #80B808;
+}
+.sixthScreen .content .carouselAndListBlock .decorationLine .line, .eighthScreen .content .carouselAndListBlock .decorationLine .line {
+  width: 10px;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sixthScreen .content .carouselAndListBlock .decorationLine .circle, .eighthScreen .content .carouselAndListBlock .decorationLine .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sixthScreen .content .carouselAndListBlock .decorationLine .circle.first, .eighthScreen .content .carouselAndListBlock .decorationLine .circle.first {
+  top: 0;
+}
+.sixthScreen .content .carouselAndListBlock .decorationLine .circle.second, .eighthScreen .content .carouselAndListBlock .decorationLine .circle.second {
+  top: 33%;
+}
+.sixthScreen .content .carouselAndListBlock .decorationLine .circle.third, .eighthScreen .content .carouselAndListBlock .decorationLine .circle.third {
+  top: 66%;
+}
+.sixthScreen .content .carouselAndListBlock .decorationLine .circle.last, .eighthScreen .content .carouselAndListBlock .decorationLine .circle.last {
+  top: calc(100% - 20px);
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul, .eighthScreen .content .carouselAndListBlock .applicationsList ul {
+  margin: 0;
+  padding: 30px;
+  list-style: none;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem:last-child, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem:last-child {
+  margin-bottom: 0;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate {
+  width: 150px;
+  margin-right: 50px;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate .imageWrapper, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate .imageWrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate img, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate img {
+  height: 100%;
+  border-radius: 5px;
+  min-width: 100%;
+  max-width: 100%;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate .date, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate .date {
+  text-align: center;
+  color: #272727;
+  font: 100 14px "Roboto";
+  margin: 0;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationText p.title, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationText p.title {
+  margin-bottom: 15px;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationText p.title.green a, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationText p.title.green a {
+  color: #80B808;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationText p.title a, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationText p.title a {
+  color: #f7533d;
+  font: 800 18px "Roboto";
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationText p.description, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationText p.description {
+  margin-bottom: 0;
+  color: #000;
+  font: 18px "Roboto";
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList form.showMoreForm, .eighthScreen .content .carouselAndListBlock .applicationsList form.showMoreForm {
+  margin-top: 10px;
+}
+.sixthScreen .content .carouselAndListBlock .applicationsList form.showMoreForm .showMoreButton, .eighthScreen .content .carouselAndListBlock .applicationsList form.showMoreForm .showMoreButton {
   display: block;
-  height: 200px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  line-height: 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: linear-gradient(-90deg, #c91a03, #f7533d);
+  color: #ffffff;
+  font: 24px "Roboto";
+}
+.sixthScreen .carousel, .sixthScreen .carousel2, .eighthScreen .carousel, .eighthScreen .carousel2 {
+  width: 600px;
+}
+.sixthScreen .carousel-cell, .eighthScreen .carousel-cell {
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+}
+.sixthScreen .carousel-cell img, .eighthScreen .carousel-cell img {
+  width: 600px;
+  border-radius: 30px;
+  display: block;
+  height: 550px;
+}
+.sixthScreen .flickity-viewport, .eighthScreen .flickity-viewport {
+  position: relative;
+}
+.sixthScreen .flickity-slider img, .eighthScreen .flickity-slider img {
+  max-width: none;
+}
+.sixthScreen .flickity-page-dots, .eighthScreen .flickity-page-dots {
+  position: absolute;
+  bottom: 50px;
+}
+.sixthScreen .flickity-page-dots .dot, .eighthScreen .flickity-page-dots .dot {
+  width: 30px;
+  height: 30px;
+  border: 5px solid #ffffff;
+  background-color: #ffffff;
+}
+.sixthScreen .flickity-page-dots .dot.is-selected, .eighthScreen .flickity-page-dots .dot.is-selected {
+  background-color: #f7533d;
+}
+.sixthScreen .carousel2 .flickity-page-dots .dot.is-selected, .eighthScreen .carousel2 .flickity-page-dots .dot.is-selected {
+  background-color: #80B808;
 }
 
-@media screen and (min-device-width: 1367px) and (max-device-width: 1601px) {
+.seventhScreen {
+  overflow: hidden;
+}
+.seventhScreen .content {
+  height: 100vh;
+  position: relative;
+}
+.seventhScreen .content .background {
+  position: relative;
+}
+.seventhScreen .content .background img {
+  min-width: 100%;
+  max-width: 100%;
+}
+.seventhScreen .content .background:before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(201, 26, 3, 0.3);
+  position: absolute;
+  top: 0;
+}
+.seventhScreen .content .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.seventhScreen .content .text p {
+  color: #ffffff;
+  font: 800 54px "Roboto";
+  text-align: center;
+}
+
+.ninthScreen .content {
+  padding: 0 50px;
+}
+.ninthScreen .content .screenTitle {
+  font: 800 54px "Roboto";
+  text-align: center;
+  margin: 60px 0;
+}
+.ninthScreen .content form {
+  display: flex;
+  flex-direction: row;
+}
+.ninthScreen .content form .firstCol {
+  margin-right: 50px;
+}
+.ninthScreen .content form .formItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+.ninthScreen .content form .formItem p {
+  width: 150px;
+  max-width: 150px;
+  font: 18px "Roboto";
+  margin: 0 20px 0 0;
+  padding: 5px 0;
+}
+.ninthScreen .content form .formItem .grayField {
+  width: 300px;
+  background: #eeeeee;
+  border-radius: 5px;
+  line-height: 40px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+}
+.ninthScreen .content form .formItem select.grayField {
+  width: 505px;
+}
+.ninthScreen .content form .formItem input[type=button] {
+  width: 200px;
+  margin-left: 5px;
+  font: bold 18px "Roboto";
+  border: none;
+  outline: none;
+  background: #f7533d;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 5px 20px;
+  line-height: 40px;
+}
+.ninthScreen .content form .formItem input[type=button].green {
+  background: #80B808;
+}
+.ninthScreen .content form .formItem textarea {
+  width: 505px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #eeeeee;
+  padding: 5px;
+}
+.ninthScreen .content form .formItem input[type=submit] {
+  width: 100%;
+  font: bold 18px "Roboto";
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: linear-gradient(-90deg, #c91a03, #f7533d);
+  color: #ffffff;
+}
+
+@media screen and (min-device-width: 1366px) and (max-device-width: 1601px) {
   .firstScreen .phoneBlock {
     width: 700px;
     left: 55%;
   }
   .firstScreen .downloadApp {
     right: 100px;
+    bottom: 50px;
   }
   .firstScreen .downloadApp a {
     width: 175px;
@@ -344,18 +616,95 @@
   }
   .firstScreen .logoAndText .subtitle {
     width: 600px;
-    font: 28px "Roboto";
+    font: 24px "Roboto";
     color: #fff;
   }
 
   .secondScreen .content .mainContent {
-    padding: 50px 0;
+    padding: 30px 0;
   }
   .secondScreen .content .mainContent .text {
     margin-bottom: 30px;
   }
   .secondScreen .content .screenTitle {
     font: 800 36px "Roboto";
+  }
+
+  .thirdScreen .content, .fourthScreen .content, .fifthScreen .content {
+    height: 100vh;
+  }
+  .thirdScreen .content .screenTitle, .fourthScreen .content .screenTitle, .fifthScreen .content .screenTitle {
+    font: 800 48px "Roboto";
+    margin-bottom: 30px;
+  }
+  .thirdScreen .content .sliderNav, .fourthScreen .content .sliderNav, .fifthScreen .content .sliderNav {
+    width: 100px;
+  }
+  .thirdScreen .content .sliderNav .navItems, .fourthScreen .content .sliderNav .navItems, .fifthScreen .content .sliderNav .navItems {
+    width: 75px;
+    height: 75px;
+  }
+  .thirdScreen .content .sliderNav .navItems.activeNavItem, .fourthScreen .content .sliderNav .navItems.activeNavItem, .fifthScreen .content .sliderNav .navItems.activeNavItem {
+    width: 100px;
+    height: 100px;
+  }
+  .thirdScreen .content .sliderNav .navItems.activeNavItem p a, .fourthScreen .content .sliderNav .navItems.activeNavItem p a, .fifthScreen .content .sliderNav .navItems.activeNavItem p a {
+    line-height: 100px;
+  }
+  .thirdScreen .content .sliderNav .navItems p a, .fourthScreen .content .sliderNav .navItems p a, .fifthScreen .content .sliderNav .navItems p a {
+    line-height: 75px;
+  }
+  .thirdScreen .content .slider, .fourthScreen .content .slider, .fifthScreen .content .slider {
+    width: 500px;
+    height: 500px;
+  }
+  .thirdScreen .content .slider .slide, .fourthScreen .content .slider .slide, .fifthScreen .content .slider .slide {
+    height: 450px;
+  }
+  .thirdScreen .content .slider .slide .imageWrapper, .fourthScreen .content .slider .slide .imageWrapper, .fifthScreen .content .slider .slide .imageWrapper {
+    width: 300px;
+    height: 300px;
+  }
+  .thirdScreen .content .slider .slide p, .fourthScreen .content .slider .slide p, .fifthScreen .content .slider .slide p {
+    font: 24px "Roboto";
+  }
+
+  .sixthScreen .content .screenTitle, .eighthScreen .content .screenTitle {
+    font: 800 48px "Roboto";
+    margin: 30px 0;
+  }
+  .sixthScreen .content .carouselAndListBlock .applicationsList ul, .eighthScreen .content .carouselAndListBlock .applicationsList ul {
+    padding: 0;
+  }
+  .sixthScreen .content .carouselAndListBlock .applicationsList ul li.applicationItem, .eighthScreen .content .carouselAndListBlock .applicationsList ul li.applicationItem {
+    margin-bottom: 20px;
+  }
+  .sixthScreen .content .carouselAndListBlock .applicationsList ul li.applicationItem .applicationText p.title, .eighthScreen .content .carouselAndListBlock .applicationsList ul li.applicationItem .applicationText p.title {
+    margin-bottom: 10px;
+  }
+  .sixthScreen .content .carouselAndListBlock .applicationsList ul li.applicationItem .applicationText p.title a, .eighthScreen .content .carouselAndListBlock .applicationsList ul li.applicationItem .applicationText p.title a {
+    font: 800 14px "Roboto";
+  }
+  .sixthScreen .content .carouselAndListBlock .applicationsList ul li.applicationItem .applicationText p.description, .eighthScreen .content .carouselAndListBlock .applicationsList ul li.applicationItem .applicationText p.description {
+    font: 14px "Roboto";
+  }
+  .sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate {
+    width: 100px;
+    margin-right: 20px;
+  }
+  .sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate .imageWrapper, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate .imageWrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .sixthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate .date, .eighthScreen .content .carouselAndListBlock .applicationsList ul .applicationItem .applicationImageAndDate .date {
+    font: 10px "Roboto";
+  }
+  .sixthScreen .carousel, .sixthScreen .carousel2, .eighthScreen .carousel, .eighthScreen .carousel2 {
+    width: 400px;
+  }
+  .sixthScreen .carousel-cell img, .eighthScreen .carousel-cell img {
+    width: 400px;
+    height: 350px;
   }
 }
 @media screen and (min-device-width: 1280px) and (max-device-width: 1365px) {

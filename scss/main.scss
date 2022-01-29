@@ -9,7 +9,7 @@ $dark: #272727;
 
 .screen {
     height: 100vh;
-    background: #ffffff;
+    background: #fff;
 }
 
 .pp-section {
@@ -56,6 +56,11 @@ $dark: #272727;
     .logoAndText {
         padding-top: 150px;
         padding-left: 100px;
+
+        a {
+            width: 450px;
+            height: 200px;
+        }
 
         .logo {
             width: 450px;
@@ -372,19 +377,357 @@ $dark: #272727;
     }
 }
 
-.sixthScreen {
+.sixthScreen, .eighthScreen {
+    .content {
+        padding: 0 50px;
+        .screenTitle {
+            font: $title;;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .carouselAndListBlock {
+            display: flex;
+            flex-direction: row;
+            /*align-items: center;*/
+
+            .carouselWrapper {
+                display: flex;
+                align-items: center;
+
+                .applicationNumber {
+                    color: $dark;
+                    font: 24px "Roboto";
+                    text-align: center;
+                    margin: 10px 0;
+                }
+            }
+
+            .decorationLine {
+                width: 20px;
+                position: relative;
+                margin: 0 30px;
+
+                &.red {
+                    .line, .circle {
+                        background: $coral;
+                    }
+                }
+
+                &.green {
+                    .line, .circle {
+                        background: $green;
+                    }
+                }
+
+                .line {
+                    width: 10px;
+                    height: 100%;
+                    border-radius: 10px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                .circle {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    &.first {
+                        top: 0;
+                    }
+
+                    &.second {
+                        top: 33%;
+                    }
+
+                    &.third {
+                        top: 66%;
+                    }
+
+                    &.last {
+                        top: calc(100% - 20px);
+                    }
+                }
+            }
+
+            .applicationsList {
+                ul {
+                    margin: 0;
+                    padding: 30px;
+                    list-style: none;
+
+                    .applicationItem {
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 50px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .applicationImageAndDate {
+                            width: 150px;
+                            margin-right: 50px;
+
+                            .imageWrapper {
+                                width: 150px;
+                                height: 150px;
+                                border-radius: 5px;
+                            }
+
+                            img {
+                                height: 100%;
+                                border-radius: 5px;
+                                min-width: 100%;
+                                max-width: 100%;
+                            }
+
+                            .date {
+                                text-align: center;
+                                color: $dark;
+                                font: 100 14px "Roboto";
+                                margin: 0;
+                            }
+                        }
+
+                        .applicationText {
+                            p.title {
+                                margin-bottom: 15px;
+
+                                &.green {
+                                    a {
+                                        color: $green;
+                                    }
+                                }
+
+                                a {
+                                    color: $coral;
+                                    font: 800 18px "Roboto";
+                                }
+                            }
+
+                            p.description {
+                                margin-bottom: 0;
+                                color: #000;
+                                font: 18px "Roboto";
+                            }
+                        }
+                    }
+                }
+
+                form.showMoreForm {
+                    margin-top: 10px;
+
+                    .showMoreButton {
+                        display: block;
+                        width: 50%;
+                        margin: 0 auto;
+                        padding: 10px;
+                        line-height: 50px;
+                        border-radius: 10px;
+                        border: none;
+                        outline: none;
+                        background: linear-gradient(-90deg, $red, $coral);
+                        color: #ffffff;
+                        font: 24px "Roboto";
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel, .carousel2 {
+        width: 600px;
+    }
+
     .carousel-cell {
-        margin-right: 20px;
+        border-radius: 30px;
         overflow: hidden;
+        width: 100%;
     }
 
     .carousel-cell img {
+        width: 600px;
+        border-radius: 30px;
         display: block;
-        height: 200px;
+        height: 550px;
+    }
+
+    .flickity-viewport {
+        position: relative;
+    }
+
+
+
+    .flickity-slider img {
+        max-width: none;
+    }
+
+    .flickity-page-dots {
+        position: absolute;
+        bottom: 50px;
+
+        .dot {
+            width: 30px;
+            height: 30px;
+            border: 5px solid #ffffff;
+            background-color: #ffffff;
+
+            &.is-selected {
+                background-color: $coral;
+            }
+        }
+    }
+
+    .carousel2 {
+        .flickity-page-dots {
+            .dot {
+                &.is-selected {
+                    background-color: $green;
+                }
+            }
+        }
     }
 }
 
-@media screen and (min-device-width: 1367px) and (max-device-width: 1601px) {
+.seventhScreen {
+    overflow: hidden;
+    .content {
+        height: 100vh;
+        position: relative;
+
+        .background {
+            position: relative;
+
+            img {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            &:before {
+                content: "";
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(201,26,3,0.3);
+                position: absolute;
+                top: 0;
+            }
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+
+
+            p {
+                color: #ffffff;
+                font: 800 54px "Roboto";
+                text-align: center;
+            }
+        }
+    }
+}
+
+.ninthScreen {
+    .content {
+        padding: 0 50px;
+
+        .screenTitle {
+            font: $title;;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+
+            .firstCol {
+                margin-right: 50px;
+            }
+
+            .formItem {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                margin-bottom: 30px;
+
+                p {
+                    width: 150px;
+                    max-width: 150px;
+                    font: 18px "Roboto";
+                    margin: 0 20px 0 0;
+                    padding: 5px 0;
+                }
+
+                .grayField {
+                    width: 300px;
+                    background: #eeeeee;
+                    border-radius: 5px;
+                    line-height: 40px;
+                    height: 50px;
+                    border: none;
+                    outline: none;
+                    padding: 5px 10px;
+                }
+
+                select.grayField {
+                    width: 505px;
+                }
+
+                input[type="button"] {
+                    width: 200px;
+                    margin-left: 5px;
+                    font: bold 18px "Roboto";
+                    border: none;
+                    outline: none;
+                    background: $coral;
+                    border-radius: 5px;
+                    color: #ffffff;
+                    padding: 5px 20px;
+                    line-height: 40px;
+
+                    &.green {
+                        background: $green;
+                    }
+                }
+
+                textarea {
+                    width: 505px;
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    background: #eeeeee;
+                    padding: 5px;
+                }
+
+                input[type="submit"] {
+                    width: 100%;
+                    font: bold 18px "Roboto";
+                    height: 60px;
+                    border-radius: 10px;
+                    border: none;
+                    outline: none;
+                    background: linear-gradient(-90deg, $red, $coral);
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-device-width: 1366px) and (max-device-width: 1601px) {
     .firstScreen {
         .phoneBlock {
             width: 700px;
@@ -393,6 +736,7 @@ $dark: #272727;
 
         .downloadApp {
             right: 100px;
+            bottom: 50px;
 
             a {
                 width: 175px;
@@ -416,7 +760,7 @@ $dark: #272727;
 
             .subtitle {
                 width: 600px;
-                font: 28px 'Roboto';
+                font: 24px 'Roboto';
                 color: #fff;
             }
         }
@@ -425,7 +769,7 @@ $dark: #272727;
     .secondScreen {
         .content {
             .mainContent {
-                padding: 50px 0;
+                padding: 30px 0;
 
                 .text {
                     margin-bottom: 30px;
@@ -435,6 +779,115 @@ $dark: #272727;
             .screenTitle {
                 font: 800 36px "Roboto";
             }
+        }
+    }
+
+    .thirdScreen, .fourthScreen, .fifthScreen {
+        .content {
+            height: 100vh;
+
+            .screenTitle {
+                font: 800 48px "Roboto";
+                margin-bottom: 30px;
+            }
+
+            .sliderNav {
+                width: 100px;
+
+                .navItems {
+                    width: 75px;
+                    height: 75px;
+
+                    &.activeNavItem {
+                        width: 100px;
+                        height: 100px;
+
+                        p {
+                            a {
+                                line-height: 100px;
+                            }
+                        }
+                    }
+
+                    p {
+                        a {
+                            line-height: 75px;
+                        }
+                    }
+                }
+            }
+
+            .slider {
+                width: 500px;
+                height: 500px;
+
+                .slide {
+                    height: 450px;
+
+                    .imageWrapper {
+                        width: 300px;
+                        height: 300px;
+                    }
+
+                    p {
+                        font: 24px "Roboto";
+                    }
+                }
+            }
+        }
+    }
+
+    .sixthScreen, .eighthScreen {
+        .content {
+            .screenTitle {
+                font: 800 48px "Roboto";
+                margin: 30px 0;
+            }
+
+            .carouselAndListBlock .applicationsList ul {
+                padding: 0;
+
+                li.applicationItem {
+                    margin-bottom: 20px;
+
+                    .applicationText {
+                        p.title {
+                            margin-bottom: 10px;
+
+                            a {
+                                font: 800 14px "Roboto";
+                            }
+                        }
+
+                        p.description {
+                            font: 14px "Roboto";
+                        }
+                    }
+                }
+
+                .applicationItem .applicationImageAndDate {
+                    width: 100px;
+                    margin-right: 20px;
+
+                    .imageWrapper {
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    .date {
+                        font: 10px "Roboto";
+                    }
+                }
+            }
+        }
+
+        .carousel, .carousel2 {
+            width: 400px;
+        }
+
+        .carousel-cell img {
+            width: 400px;
+            height: 350px;
         }
     }
 }

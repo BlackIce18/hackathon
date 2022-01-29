@@ -1,10 +1,11 @@
-$(document).ready(function() {
-    Parallax();
+$(document).ready(function(){
+    //Parallax();
 
     ScrollOneWindow();
     Carousel();
-});
 
+    YandexMap();
+});
 function Parallax() {
     var images = document.querySelectorAll('img.backgroundImage');
     new simpleParallax(images);
@@ -16,7 +17,7 @@ function ScrollOneWindow() {
         direction: 'vertical',
         verticalCentered: false,
         sectionsColor: [],
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
         scrollingSpeed: 700,
         easing: 'swing',
         loopBottom: false,
@@ -115,6 +116,10 @@ function ScrollOneWindow() {
                 $('.fifthScreen > .content > .slider').css({"transform":"scale(1)"});
                 $('.fifthScreen > .content > .SliderNavigation > .sliderNav > .navItems').css({"opacity":"1"})
             }
+
+            if(anchorLink == "seventhPage") {
+                TypedScript();
+            }
         },
         afterRender: function(){},
     });
@@ -143,4 +148,115 @@ function Carousel() {
             img.style[ transformProp ] = 'translateX(' + x  + 'px)';
         });
     });
+
+
+
+    var carousel = document.querySelector('.carousel2');
+    var flkty = new Flickity( carousel, {
+        prevNextButtons: false,
+        autoPlay: 1500,
+        imagesLoaded: true,
+        percentPosition: false,
+        fade: true
+    });
+
+    var imgs = carousel.querySelectorAll('.carousel-cell img');
+// get transform property
+    var docStyle = document.documentElement.style;
+    var transformProp = typeof docStyle.transform == 'string' ?
+        'transform' : 'WebkitTransform';
+
+    flkty.on( 'scroll', function() {
+        flkty.slides.forEach( function( slide, i ) {
+            var img = imgs[i];
+            var x = ( slide.target + flkty.x ) * -1/3;
+            img.style[ transformProp ] = 'translateX(' + x  + 'px)';
+        });
+    });
+}
+
+function TypedScript() {
+    $(function(){
+
+        new Typed("#typing",{
+            strings: ["Неудовлетворены обслуживанием?", " Увидели происшествие?", " Есть интересные предложения?", " Сообщите нам, оставив подробности в заявке!"],
+            typeSpeed: 70,
+            backDelay: 1500,
+            startDelay: 2500,
+            loop: true,
+            loopCount: 1,
+            contentType: 'html',
+        });
+
+    });
+}
+
+function YandexMap() {
+    document.cookie = "SameSite";
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
+
+        function init(){
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [48.015885, 37.802837],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 9,
+                controls: []
+            });
+            myMap.behaviors.disable('scrollZoom'); // отключаем масштабирование скролом
+            myMap.controls.add("zoomControl", { // из элементов карты оставляем только масштабирование ползунком
+                position: {top: 10, left: 10}
+            });
+
+
+
+            var loadControl = new ymaps.control.Button({
+                data: { content: 'Добавить метку' },
+                options: { maxWidth: 200, float: 'right', selectOnClick: false }
+            });
+            myMap.controls.add(loadControl);
+
+            loadControl.events.add('click', function () {
+                if (ymaps.Placemark) {
+                    // Если модуль уже был загружен, то нет необходимости повторно обращаться к модульной системе.
+                    addPlacemark();
+                } else {
+                    // Загружаем по требованию класс метки и оверлея метки.
+                    // По умолчанию оверлей автоматически загружается после добавления метки на карту.
+                    // В данном примере происходит асинхронная загрузка самого модуля метки и нет необходимости в отдельной подгрузке оверлея.
+                    ymaps.modules.require(['Placemark', 'overlay.Placemark'])
+                        .spread(function (Placemark, PlacemarkOverlay) {
+                            // Добавляем в глобальную область видимости класс вручную,
+                            // так как при использовании метода require модульной системы этого не происходит.
+                            ymaps.Placemark = Placemark;
+                            addPlacemark();
+                        });
+                }
+            });
+
+            function addPlacemark() {
+                myMap.geoObjects.removeAll();
+
+                var center = myMap.getCenter();
+
+                // добавляем метку на карту
+                var myPlacemark = new ymaps.Placemark(
+                    center, {},
+                    {
+                        iconLayout: 'default#image', // обозначаем что будет использоваться пользовательское изображение
+                        iconImageHref: 'images/267-2678109_map-point-google-map-marker-gif.png',  // указываем путь к картинке которая будет служить меткой
+                        iconImageSize: [38, 59], // указываем размер изображения
+                        iconImageOffset: [-19, -59] // обозначаем сдвиг от левого верхнего угла к точке изображения метки .
+                    });
+
+                myMap.geoObjects.add(myPlacemark) // добавляем метку на карту
+            }
+        }
 }

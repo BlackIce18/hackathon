@@ -6,11 +6,14 @@
     <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="libs/jquery.pagepiling.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
     <!--<script src="libs/bootstrap.bundle.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d288dea4-d8bc-4dd7-b345-07819003a95d&lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 <body>
 <div id="main">
@@ -167,57 +170,283 @@
     <section class="sixthScreen screen">
         <div class="content">
             <h3 class="screenTitle">Мы получили ваши заявки:</h3>
-            <div class="">
+            <div class="carouselAndListBlock">
 
-                <div class="carousel">
-                    <div class="carousel-cell">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                <div class="carouselWrapper">
+                    <div class="wrapperFlex">
+                        <div class="carousel">
+                            <div class="carousel-cell">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                            </div>
+                        </div>
+                        <div class="applicationNumber">№00000001</div>
                     </div>
-                    <div class="carousel-cell">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" alt="contrail" />
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" alt="golden hour" />
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" alt="flight formation" />
-                    </div>
+                </div>
+
+                <div class="decorationLine red">
+                    <div class="line"></div>
+                    <div class="circle first"></div>
+                    <div class="circle second"></div>
+                    <div class="circle third"></div>
+                    <div class="circle last"></div>
                 </div>
 
                 <div class="applicationsList">
                     <ul>
-                        <li>
-                            <div>
-                                <img src="" alt="" class="">
-                                <span class="date">01.01.2022</span>
+                        <li class="applicationItem">
+                            <div class="applicationImageAndDate">
+                                <div class="imageWrapper">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                                </div>
+                                <p class="date">01.01.2022</p>
                             </div>
-                            <div>
+                            <div class="applicationText">
                                 <p class="title"><a href="#">№00000000 Название категории <span class="rating">(рейтинг 500)</span></a></p>
-                                <p class="description"></p>
+                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
                             </div>
                         </li>
-                        <li></li>
-                        <li></li>
+                        <li class="applicationItem">
+                            <div class="applicationImageAndDate">
+                                <div class="imageWrapper">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+                                </div>
+                                <p class="date">01.01.2022</p>
+                            </div>
+                            <div class="applicationText">
+                                <p class="title"><a href="#">№00000001 Название категории <span class="rating">(рейтинг 500)</span></a></p>
+                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                            </div>
+                        </li>
+                        <li class="applicationItem">
+                            <div class="applicationImageAndDate">
+                                <div class="imageWrapper">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                                </div>
+                                <p class="date">01.01.2022</p>
+                            </div>
+                            <div class="applicationText">
+                                <p class="title"><a href="#">№00000002 Название категории <span class="rating">(рейтинг 500)</span></a></p>
+                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                            </div>
+                        </li>
                     </ul>
 
-                    <form action="#" method="GET">
-                        <button>Показать еще</button>
+                    <form class="showMoreForm" action="#" method="GET">
+                        <button class="showMoreButton">Показать еще</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="seventhScreen screen">
+        <div class="content">
+            <div class="background">
+                <img src="images/5f5b71b40a57090273490a83_LR2.jpg" alt="">
+            </div>
+
+            <!--<div class="text">
+                <p>Неудовлетворены обслуживанием?
+                Увидели происшествие?
+                Есть интересные предложения?
+                Сообщите нам, оставив подробности в заявке!</p>
+                <span id="typed"></span>
+            </div>-->
+            <div class="box text">
+                <p>
+                    <span id="typing"></span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="eighthScreen screen">
+        <div class="content">
+            <h3 class="screenTitle">Мы получили ваши заявки:</h3>
+            <div class="carouselAndListBlock">
+
+                <div class="carouselWrapper">
+                    <div class="wrapperFlex">
+                        <div class="carousel2">
+                            <div class="carousel-cell">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                            </div>
+                        </div>
+                        <div class="applicationNumber">№00000001</div>
+                    </div>
+                </div>
+
+                <div class="decorationLine green">
+                    <div class="line"></div>
+                    <div class="circle first"></div>
+                    <div class="circle second"></div>
+                    <div class="circle third"></div>
+                    <div class="circle last"></div>
+                </div>
+
+                <div class="applicationsList">
+                    <ul>
+                        <li class="applicationItem">
+                            <div class="applicationImageAndDate">
+                                <div class="imageWrapper">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                                </div>
+                                <p class="date">01.01.2022</p>
+                            </div>
+                            <div class="applicationText">
+                                <p class="title green"><a href="#">№00000000 Название категории <span class="rating">(рейтинг 500)</span></a></p>
+                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                            </div>
+                        </li>
+                        <li class="applicationItem">
+                            <div class="applicationImageAndDate">
+                                <div class="imageWrapper">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+                                </div>
+                                <p class="date">01.01.2022</p>
+                            </div>
+                            <div class="applicationText">
+                                <p class="title green"><a href="#">№00000001 Название категории <span class="rating">(рейтинг 500)</span></a></p>
+                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                            </div>
+                        </li>
+                        <li class="applicationItem">
+                            <div class="applicationImageAndDate">
+                                <div class="imageWrapper">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                                </div>
+                                <p class="date">01.01.2022</p>
+                            </div>
+                            <div class="applicationText">
+                                <p class="title green"><a href="#">№00000002 Название категории <span class="rating">(рейтинг 500)</span></a></p>
+                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описание
+                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <form class="showMoreForm" action="#" method="GET">
+                        <button class="showMoreButton">Показать еще</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ninthScreen screen">
+        <div class="content">
+            <h3 class="screenTitle">Формирование заявки</h3>
+            <form action="" method="post">
+                <div class="firstCol">
+                    <div class="formItem">
+                        <p>ФИО</p>
+                        <div class="d-flex flex-row">
+                            <input class="grayField" type="text">
+                            <input class="green" type="button" value="Анонимно">
+                        </div>
+                    </div>
+
+                    <div class="formItem">
+                        <p>Телефон</p>
+                        <div class="d-flex flex-row">
+                            <input class="grayField" type="text">
+                            <input type="button" value="Верефицировать">
+                        </div>
+                    </div>
+
+                    <div class="formItem">
+                        <p>Email</p>
+                        <div class="d-flex flex-row">
+                            <input class="grayField" type="text">
+                            <input type="button" value="Верефицировать">
+                        </div>
+                    </div>
+
+                    <div class="formItem">
+                        <p>Категория</p>
+                        <select id="select_selector" class="grayField">
+                            <option value="1"  selected="selected">общественный транспорт </option>
+                            <option value="2">состояние дорог и прилегающий территорий</option>
+                            <option value="3">состояние благоустройства города</option>
+                            <option value="4">аварийные участки города</option>
+                            <option value="5">постройки в аварийном состоянии</option>
+                            <option value="6">постройки в аварийном состоянии</option>
+                            <option value="7">уборка территории и вывоз отходов</option>
+                            <option value="8">некачественные товары </option>
+                            <option value="9">скопление животных </option>
+                            <option value="10">последствия стихийных бедствий</option>
+                            <option value="11">последствие военных действий </option>
+                            <option value="12">проявление вандализма</option>
+                            <option value="13">скопление криминальных (или асоциальных) элементов</option>
+                            <option value="14">нарушение ПДД</option>
+                            <option value="15">инициативы граждан</option>
+                            <option value="16">утерянные \ найденные вещи</option>
+                            <option value="17">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="formItem">
+                        <p>Описание</p>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div class="secondCol">
+                    <div class="formItem">
+                        <p>Видео</p>
+                        <input class="grayField" type="text" placeholder="Ссылка на видео">
+                        <input type="button" value="Добавить">
+                    </div>
+
+                    <div class="formItem">
+                        <p>Фото</p>
+                        <div class="input__wrapper">
+                            <input name="file" type="file" id="input__file" class="input input__file" multiple accept=".png, .jpg, .jpeg">
+                            <label for="input__file" class="input__file-button">
+                                <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./img/add.svg" alt="Выбрать файл" width="25"></span>
+                                <span class="input__file-button-text">Выберите файл</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="formItem">
+                        <p>Расположение</p>
+                        <div id="map" style="width: 500px; height: 340px"></div>
+                    </div>
+
+                    <div class="formItem">
+                        <input type="submit" value="Отправить">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="libs/jquery.pagepiling.min.js"></script>
