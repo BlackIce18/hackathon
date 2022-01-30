@@ -10,6 +10,7 @@ $dark: #272727;
 .screen {
     height: 100vh;
     background: #fff;
+    overflow-y: auto;
 }
 
 .pp-section {
@@ -650,8 +651,15 @@ $dark: #272727;
         }
 
         form {
-            display: flex;
-            flex-direction: row;
+
+            margin: 0 auto;
+
+            .formWrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
 
             .firstCol {
                 margin-right: 50px;
@@ -705,11 +713,14 @@ $dark: #272727;
 
                 textarea {
                     width: 505px;
+                    min-height: 100px;
+                    max-height: 500px;
                     outline: none;
                     border: none;
                     border-radius: 5px;
                     background: #eeeeee;
                     padding: 5px;
+                    resize: none;
                 }
 
                 input[type="submit"] {
@@ -721,6 +732,41 @@ $dark: #272727;
                     outline: none;
                     background: linear-gradient(-90deg, $red, $coral);
                     color: #ffffff;
+                }
+
+                .input__wrapper {
+                    width: 150px;
+                    height: 150px;
+                    .input__file {
+                        display: none;
+                    }
+
+                    .input__file-button {
+                        width: 150px;
+                        height: 150px;
+                        cursor: pointer;
+
+                        .input__file-icon-wrapper {
+                            background: #eeeeee;
+                            border-radius: 5px;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            .input__file-icon {
+                                width: 50px;
+                                height: 50px;
+                                stroke: #bebebe;
+                                                        }
+                        }
+                    }
+                }
+
+                #map {
+                    width: 500px;
+                    height: 340px;
                 }
             }
         }
@@ -744,8 +790,8 @@ $dark: #272727;
         }
 
         .logoAndText {
-            padding-top: 100px;
-            padding-left: 100px;
+            padding-top: 80px;
+            padding-left: 80px;
 
             .logo {
                 width: 450px;
@@ -890,6 +936,72 @@ $dark: #272727;
             height: 350px;
         }
     }
+
+    .ninthScreen {
+        .content {
+            .screenTitle {
+                font: 800 36px "Roboto";
+            }
+
+            form {
+                .formItem {
+                    margin-bottom: 20px;
+
+                    p {
+                        width: 100px;
+                        max-width: 100px;
+                        font: 14px "Roboto";
+                    }
+
+                    .grayField {
+                        line-height: 30px;
+                        height: 40px;
+                    }
+
+                    input[type=button] {
+                        width: 150px;
+                        line-height: 40px;
+                        height: 40px;
+                        font: bold 14px "Roboto";
+                        padding: 5px 15px;
+                    }
+
+                    select.grayField {
+                        width: 455px;
+                    }
+
+                    textarea {
+                        width: 455px;
+                        height: 200px;
+                    }
+
+                    .input__wrapper {
+                        width: 100px;
+                        height: 100px;
+
+                        .input__file-button {
+                            width: 100px;
+                            height: 100px;
+
+                            .input__file-icon-wrapper {
+
+                            }
+                        }
+                    }
+
+                    #map {
+                        width: 400px;
+                        height: 200px;
+                    }
+
+                    input[type="submit"] {
+                        height: 50px;
+                        font: bold 14px "Roboto";
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-device-width: 1280px) and (max-device-width: 1365px) {
@@ -912,19 +1024,19 @@ $dark: #272727;
             padding-left: 100px;
 
             .logo {
-                width: 450px;
+                width: 400px;
                 margin: 0 auto 30px auto;
             }
 
             .title {
-                width: 600px;
-                font: 800 36px 'Roboto';
+                width: 500px;
+                font: 800 32px 'Roboto';
                 color: #fff;
             }
 
             .subtitle {
-                width: 600px;
-                font: 28px 'Roboto';
+                width: 500px;
+                font: 24px 'Roboto';
                 color: #fff;
             }
         }
@@ -953,6 +1065,30 @@ $dark: #272727;
 
             .screenTitle {
                 font: 800 36px "Roboto";
+            }
+        }
+    }
+
+    .ninthScreen {
+        .content {
+            .screenTitle {
+                font: 800 36px "Roboto";
+            }
+
+            form {
+                .formItem {
+                    margin-bottom: 20px;
+
+                    .grayField {
+                        line-height: 30px;
+                        height: 40px;
+                    }
+
+                    input[type=button] {
+                        width: 150px;
+                        line-height: 30px;
+                    }
+                }
             }
         }
     }
@@ -1125,6 +1261,14 @@ $dark: #272727;
 
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .firstScreen {
+        .backgroundImageBlock {
+            .backgroundImage {
+                min-width: 200%;
+                max-width: 200%;
+                height: 100%;
+            }
+        }
+
         .phoneBlock {
             display: none;
         }
@@ -1141,29 +1285,39 @@ $dark: #272727;
 
         .logoAndText {
             position: absolute;
-            top: 50px;
-            left: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0;
 
             .logo {
-                width: 250px;
+                width: 550px;
                 margin: 0 auto 30px auto;
             }
 
             .title {
                 width: 500px;
-                font: 800 32px 'Roboto';
+                font: 800 42px 'Roboto';
                 color: #fff;
             }
 
             .subtitle {
                 width: 500px;
-                font: 24px 'Roboto';
+                font: 36px 'Roboto';
                 color: #fff;
+                margin-bottom: 50px;
             }
         }
 
         .downloadAppMobile {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            a {
+                width: 100%;
+                margin-right: 0;
+            }
         }
 
         .downloadApp {
@@ -1179,10 +1333,13 @@ $dark: #272727;
 
         .content {
             .screenTitle {
+                font: 800 48px "Roboto";
                 margin: 60px 0 30px 0;
             }
             .mainContent {
                 padding: 30px 0;
+                display: flex;
+                flex-direction: column;
 
                 .text {
                     font: 24px 'Roboto';
@@ -1198,10 +1355,120 @@ $dark: #272727;
                         max-width: 100px;
                     }
                 }
-            }
 
-            .screenTitle {
-                font: 800 36px "Roboto";
+                .firstCol, .secondCol, .thirdCol, .fourthCol {
+                    margin-bottom: 30px;
+
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+
+                    p.number {
+                        font: 800 48px "Roboto";
+                        float:left;
+                        margin-bottom: 0;
+                        line-height: 50px;
+                    }
+
+                    p.text {
+                        font: 36px "Roboto";
+                        margin-bottom: 15px;
+                        line-height: 36px;
+                        height: 50px;
+                    }
+
+                    .circleWithImage {
+
+                        img {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .thirdScreen, .fourthScreen, .fifthScreen {
+        .content {
+            flex-direction: column;
+            padding: 30px;
+
+            .SliderNavigation {
+                height: auto;
+                margin-bottom: 30px;
+
+                .sliderNav {
+                    width: 400px;
+                    flex-direction: row;
+
+                    .navItems {
+                        margin-bottom: 25px;
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .sixthScreen, .eighthScreen {
+
+        .carousel, .carousel2 {
+            width: 400px;
+        }
+
+        .content {
+            .carouselAndListBlock {
+                flex-direction: column;
+
+                .carouselWrapper {
+                    margin: 0 auto;
+                }
+
+                .decorationLine {
+                    width: 100%;
+                    height: 20px;
+                    margin: 0;
+
+                    .line {
+                        width: 100%;
+                        height: 10px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    .circle.first {
+                        left: 0;
+                    }
+
+                    .circle.last {
+                        left: auto;
+                        right: 0;
+                        transform: none;
+                    }
+
+                    .circle.second, .circle.third {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .carousel-cell img {
+            width: 400px;
+            height: 350px;
+        }
+    }
+
+    .seventhScreen {
+        .content {
+            .background {
+                img {
+                    min-width: 300%;
+                    max-width: 300%;
+                    height: 100%;
+                }
             }
         }
     }

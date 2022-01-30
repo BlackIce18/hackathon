@@ -274,7 +274,7 @@
 
     <section class="eighthScreen screen">
         <div class="content">
-            <h3 class="screenTitle">Мы получили ваши заявки:</h3>
+            <h3 class="screenTitle">Данные заявки были рассмотрены и решены:</h3>
             <div class="carouselAndListBlock">
 
                 <div class="carouselWrapper">
@@ -359,7 +359,8 @@
     <section class="ninthScreen screen">
         <div class="content">
             <h3 class="screenTitle">Формирование заявки</h3>
-            <form action="" method="post">
+                <form action="" method="post">
+            <div class="formWrapper">
                 <div class="firstCol">
                     <div class="formItem">
                         <p>ФИО</p>
@@ -426,21 +427,23 @@
                         <div class="input__wrapper">
                             <input name="file" type="file" id="input__file" class="input input__file" multiple accept=".png, .jpg, .jpeg">
                             <label for="input__file" class="input__file-button">
-                                <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./img/add.svg" alt="Выбрать файл" width="25"></span>
-                                <span class="input__file-button-text">Выберите файл</span>
+                                <span class="input__file-icon-wrapper">
+                                    <svg class="input__file-icon" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+                                </span>
                             </label>
                         </div>
                     </div>
 
                     <div class="formItem">
                         <p>Расположение</p>
-                        <div id="map" style="width: 500px; height: 340px"></div>
+                        <div id="map"></div>
                     </div>
 
                     <div class="formItem">
                         <input type="submit" value="Отправить">
                     </div>
                 </div>
+            </div>
             </form>
         </div>
     </section>

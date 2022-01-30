@@ -5,6 +5,7 @@ $(document).ready(function(){
     Carousel();
 
     YandexMap();
+    UploadFiles();
 });
 function Parallax() {
     var images = document.querySelectorAll('img.backgroundImage');
@@ -12,6 +13,8 @@ function Parallax() {
 }
 
 function ScrollOneWindow() {
+    let isTyped = false;
+
     $('#main').pagepiling({
         menu: null,
         direction: 'vertical',
@@ -118,7 +121,10 @@ function ScrollOneWindow() {
             }
 
             if(anchorLink == "seventhPage") {
-                TypedScript();
+                if(isTyped === false) {
+                    TypedScript();
+                    isTyped = !isTyped;
+                }
             }
         },
         afterRender: function(){},
@@ -259,4 +265,22 @@ function YandexMap() {
                 myMap.geoObjects.add(myPlacemark) // добавляем метку на карту
             }
         }
+}
+
+function UploadFiles() {
+    let fields = $('.field__file').each(function (input) {
+        let label = input.nextElementSibling,
+            labelVal = label.querySelector('.field__file-fake').innerText;
+
+        $(input).on('change', function (e) {
+            let countFiles = '';
+            if (this.files && this.files.length >= 1)
+                countFiles = this.files.length;
+
+            if (countFiles)
+                label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;
+            else
+                label.querySelector('.field__file-fake').innerText = labelVal;
+        });
+    });
 }

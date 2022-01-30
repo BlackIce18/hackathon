@@ -7,6 +7,7 @@
 .screen {
   height: 100vh;
   background: #fff;
+  overflow-y: auto;
 }
 
 .pp-section {
@@ -523,8 +524,13 @@
   margin: 60px 0;
 }
 .ninthScreen .content form {
+  margin: 0 auto;
+}
+.ninthScreen .content form .formWrapper {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .ninthScreen .content form .firstCol {
   margin-right: 50px;
@@ -572,11 +578,14 @@
 }
 .ninthScreen .content form .formItem textarea {
   width: 505px;
+  min-height: 100px;
+  max-height: 500px;
   outline: none;
   border: none;
   border-radius: 5px;
   background: #eeeeee;
   padding: 5px;
+  resize: none;
 }
 .ninthScreen .content form .formItem input[type=submit] {
   width: 100%;
@@ -587,6 +596,36 @@
   outline: none;
   background: linear-gradient(-90deg, #c91a03, #f7533d);
   color: #ffffff;
+}
+.ninthScreen .content form .formItem .input__wrapper {
+  width: 150px;
+  height: 150px;
+}
+.ninthScreen .content form .formItem .input__wrapper .input__file {
+  display: none;
+}
+.ninthScreen .content form .formItem .input__wrapper .input__file-button {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.ninthScreen .content form .formItem .input__wrapper .input__file-button .input__file-icon-wrapper {
+  background: #eeeeee;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ninthScreen .content form .formItem .input__wrapper .input__file-button .input__file-icon-wrapper .input__file-icon {
+  width: 50px;
+  height: 50px;
+  stroke: #bebebe;
+}
+.ninthScreen .content form .formItem #map {
+  width: 500px;
+  height: 340px;
 }
 
 @media screen and (min-device-width: 1366px) and (max-device-width: 1601px) {
@@ -602,8 +641,8 @@
     width: 175px;
   }
   .firstScreen .logoAndText {
-    padding-top: 100px;
-    padding-left: 100px;
+    padding-top: 80px;
+    padding-left: 80px;
   }
   .firstScreen .logoAndText .logo {
     width: 450px;
@@ -706,6 +745,52 @@
     width: 400px;
     height: 350px;
   }
+
+  .ninthScreen .content .screenTitle {
+    font: 800 36px "Roboto";
+  }
+  .ninthScreen .content form .formItem {
+    margin-bottom: 20px;
+  }
+  .ninthScreen .content form .formItem p {
+    width: 100px;
+    max-width: 100px;
+    font: 14px "Roboto";
+  }
+  .ninthScreen .content form .formItem .grayField {
+    line-height: 30px;
+    height: 40px;
+  }
+  .ninthScreen .content form .formItem input[type=button] {
+    width: 150px;
+    line-height: 40px;
+    height: 40px;
+    font: bold 14px "Roboto";
+    padding: 5px 15px;
+  }
+  .ninthScreen .content form .formItem select.grayField {
+    width: 455px;
+  }
+  .ninthScreen .content form .formItem textarea {
+    width: 455px;
+    height: 200px;
+  }
+  .ninthScreen .content form .formItem .input__wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .ninthScreen .content form .formItem .input__wrapper .input__file-button {
+    width: 100px;
+    height: 100px;
+  }
+  .ninthScreen .content form .formItem #map {
+    width: 400px;
+    height: 200px;
+  }
+  .ninthScreen .content form .formItem input[type=submit] {
+    height: 50px;
+    font: bold 14px "Roboto";
+  }
 }
 @media screen and (min-device-width: 1280px) and (max-device-width: 1365px) {
   .firstScreen .phoneBlock {
@@ -723,17 +808,17 @@
     padding-left: 100px;
   }
   .firstScreen .logoAndText .logo {
-    width: 450px;
+    width: 400px;
     margin: 0 auto 30px auto;
   }
   .firstScreen .logoAndText .title {
-    width: 600px;
-    font: 800 36px "Roboto";
+    width: 500px;
+    font: 800 32px "Roboto";
     color: #fff;
   }
   .firstScreen .logoAndText .subtitle {
-    width: 600px;
-    font: 28px "Roboto";
+    width: 500px;
+    font: 24px "Roboto";
     color: #fff;
   }
 
@@ -754,6 +839,21 @@
   }
   .secondScreen .content .screenTitle {
     font: 800 36px "Roboto";
+  }
+
+  .ninthScreen .content .screenTitle {
+    font: 800 36px "Roboto";
+  }
+  .ninthScreen .content form .formItem {
+    margin-bottom: 20px;
+  }
+  .ninthScreen .content form .formItem .grayField {
+    line-height: 30px;
+    height: 40px;
+  }
+  .ninthScreen .content form .formItem input[type=button] {
+    width: 150px;
+    line-height: 30px;
   }
 }
 @media screen and (min-device-width: 1024px) and (max-device-width: 1279px) {
@@ -883,6 +983,11 @@
   }
 }
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .firstScreen .backgroundImageBlock .backgroundImage {
+    min-width: 200%;
+    max-width: 200%;
+    height: 100%;
+  }
   .firstScreen .phoneBlock {
     display: none;
   }
@@ -896,25 +1001,34 @@
   }
   .firstScreen .logoAndText {
     position: absolute;
-    top: 50px;
-    left: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
   }
   .firstScreen .logoAndText .logo {
-    width: 250px;
+    width: 550px;
     margin: 0 auto 30px auto;
   }
   .firstScreen .logoAndText .title {
     width: 500px;
-    font: 800 32px "Roboto";
+    font: 800 42px "Roboto";
     color: #fff;
   }
   .firstScreen .logoAndText .subtitle {
     width: 500px;
-    font: 24px "Roboto";
+    font: 36px "Roboto";
     color: #fff;
+    margin-bottom: 50px;
   }
   .firstScreen .downloadAppMobile {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .firstScreen .downloadAppMobile a {
+    width: 100%;
+    margin-right: 0;
   }
   .firstScreen .downloadApp {
     display: none;
@@ -925,10 +1039,13 @@
     height: 150px;
   }
   .secondScreen .content .screenTitle {
+    font: 800 48px "Roboto";
     margin: 60px 0 30px 0;
   }
   .secondScreen .content .mainContent {
     padding: 30px 0;
+    display: flex;
+    flex-direction: column;
   }
   .secondScreen .content .mainContent .text {
     font: 24px "Roboto";
@@ -942,7 +1059,81 @@
     min-width: 100px;
     max-width: 100px;
   }
-  .secondScreen .content .screenTitle {
-    font: 800 36px "Roboto";
+  .secondScreen .content .mainContent .firstCol, .secondScreen .content .mainContent .secondCol, .secondScreen .content .mainContent .thirdCol, .secondScreen .content .mainContent .fourthCol {
+    margin-bottom: 30px;
+  }
+  .secondScreen .content .mainContent .firstCol:last-child, .secondScreen .content .mainContent .secondCol:last-child, .secondScreen .content .mainContent .thirdCol:last-child, .secondScreen .content .mainContent .fourthCol:last-child {
+    margin-bottom: 0;
+  }
+  .secondScreen .content .mainContent .firstCol p.number, .secondScreen .content .mainContent .secondCol p.number, .secondScreen .content .mainContent .thirdCol p.number, .secondScreen .content .mainContent .fourthCol p.number {
+    font: 800 48px "Roboto";
+    float: left;
+    margin-bottom: 0;
+    line-height: 50px;
+  }
+  .secondScreen .content .mainContent .firstCol p.text, .secondScreen .content .mainContent .secondCol p.text, .secondScreen .content .mainContent .thirdCol p.text, .secondScreen .content .mainContent .fourthCol p.text {
+    font: 36px "Roboto";
+    margin-bottom: 15px;
+    line-height: 36px;
+    height: 50px;
+  }
+  .thirdScreen .content, .fourthScreen .content, .fifthScreen .content {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .thirdScreen .content .SliderNavigation, .fourthScreen .content .SliderNavigation, .fifthScreen .content .SliderNavigation {
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .thirdScreen .content .SliderNavigation .sliderNav, .fourthScreen .content .SliderNavigation .sliderNav, .fifthScreen .content .SliderNavigation .sliderNav {
+    width: 400px;
+    flex-direction: row;
+  }
+  .thirdScreen .content .SliderNavigation .sliderNav .navItems, .fourthScreen .content .SliderNavigation .sliderNav .navItems, .fifthScreen .content .SliderNavigation .sliderNav .navItems {
+    margin-bottom: 25px;
+    margin-right: 30px;
+  }
+
+  .sixthScreen .carousel, .sixthScreen .carousel2, .eighthScreen .carousel, .eighthScreen .carousel2 {
+    width: 400px;
+  }
+  .sixthScreen .content .carouselAndListBlock, .eighthScreen .content .carouselAndListBlock {
+    flex-direction: column;
+  }
+  .sixthScreen .content .carouselAndListBlock .carouselWrapper, .eighthScreen .content .carouselAndListBlock .carouselWrapper {
+    margin: 0 auto;
+  }
+  .sixthScreen .content .carouselAndListBlock .decorationLine, .eighthScreen .content .carouselAndListBlock .decorationLine {
+    width: 100%;
+    height: 20px;
+    margin: 0;
+  }
+  .sixthScreen .content .carouselAndListBlock .decorationLine .line, .eighthScreen .content .carouselAndListBlock .decorationLine .line {
+    width: 100%;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .sixthScreen .content .carouselAndListBlock .decorationLine .circle.first, .eighthScreen .content .carouselAndListBlock .decorationLine .circle.first {
+    left: 0;
+  }
+  .sixthScreen .content .carouselAndListBlock .decorationLine .circle.last, .eighthScreen .content .carouselAndListBlock .decorationLine .circle.last {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+  .sixthScreen .content .carouselAndListBlock .decorationLine .circle.second, .sixthScreen .content .carouselAndListBlock .decorationLine .circle.third, .eighthScreen .content .carouselAndListBlock .decorationLine .circle.second, .eighthScreen .content .carouselAndListBlock .decorationLine .circle.third {
+    display: none;
+  }
+  .sixthScreen .carousel-cell img, .eighthScreen .carousel-cell img {
+    width: 400px;
+    height: 350px;
+  }
+
+  .seventhScreen .content .background img {
+    min-width: 300%;
+    max-width: 300%;
+    height: 100%;
   }
 }
