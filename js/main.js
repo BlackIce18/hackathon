@@ -42,20 +42,20 @@ function ScrollOneWindow() {
         //events
         onLeave: function(index, nextIndex, direction){
             if(index == 2) {
-                $('.mainContent > .col > .number').animate({
+                $('.mainContent > .colsWrapper > .item > .number').animate({
                     opacity: 0,
 
                 }).css({
                     "transform":"translateY(-20px)"
                 });
 
-                $('.mainContent > .col > .text').animate({
+                $('.mainContent > .colsWrapper > .item > .text').animate({
                     opacity: 0,
                 }).css({
                     "transform":"translateY(-20px)"
                 });
 
-                $('.mainContent > .col > .circleWithImage').animate({
+                $('.mainContent > .colsWrapper > .item > .circleWithImage').animate({
                     opacity: 0,
                 }).css({
                     "transform":"scale(0) translateY(50px)"
@@ -79,11 +79,11 @@ function ScrollOneWindow() {
                 }
 */
                 if(anchorLink == 'secondPage') {
-                    $('.mainContent > .col > .number').animate({
+                    $('.mainContent > .colsWrapper > .item > .number').animate({
                         opacity: 1,
 
                     },function () {
-                        $('.mainContent > .col > .text').animate({
+                        $('.mainContent > .colsWrapper > .item > .text').animate({
                             opacity: 1,
                         }).css({
                             "transform":"translateY(0px)"
@@ -92,7 +92,7 @@ function ScrollOneWindow() {
                         "transform":"translateY(0px)"
                     });
 
-                    $('.mainContent > .col > .circleWithImage').animate({
+                    $('.mainContent > .colsWrapper > .item > .circleWithImage').animate({
                         opacity: 1,
                     }).css({
                         "transform":"scale(1) translateY(0px)"

@@ -31,7 +31,7 @@ $dark: #272727;
             width: 100%;
             height: 100%;
             min-height: 100%;
-            background-color: rgba(175,34,34,0.3);
+            background-color: rgba(152, 27, 27, 0.4);
             position: absolute;
             z-index: 100;
         }
@@ -39,6 +39,7 @@ $dark: #272727;
         .backgroundImage {
             min-width: 100%;
             max-width: 100%;
+            height: 100%;
         }
 
         .mask {
@@ -162,6 +163,7 @@ $dark: #272727;
 
     .content {
         padding: 0 50px;
+        height: 100%;
 
         .screenTitle {
             font: $title;
@@ -172,49 +174,59 @@ $dark: #272727;
         .mainContent {
             padding: 100px 0;
 
-            .number {
-                color: $red;
-                font: 800 48px 'Roboto';
-                text-align: center;
-                margin-bottom: 20px;
-            }
-
-            .text  {
-                text-align: center;
-                font: 28px 'Roboto';
-                height: 80px;
-            }
-
-            .circleWithImage {
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                background: $coral;
-                box-shadow: 0 0 5px $dark;
+            .colsWrapper {
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                margin: 0 auto;
+                justify-content: center;
 
-                img {
-                    min-width: 125px;
-                    max-width: 125px;
-
+                .item {
+                    width: 400px;
                 }
-            }
-        }
 
-        .firstCol, .secondCol, .thirdCol, .fourthCol {
-            .number, .text {
-                opacity: 0;
-                transform: translateY(-20px);
-                transition: transform 1s ease-in-out;
-            }
+                .firstCol, .secondCol, .thirdCol, .fourthCol {
+                    .number, .text {
+                        opacity: 0;
+                        transform: translateY(-20px);
+                        transition: transform 1s ease-in-out;
+                    }
 
-            .circleWithImage {
-                opacity: 0;
-                transform: scale(0) translateY(50px);
-                transition: 1s ease-in-out;
+                    .circleWithImage {
+                        opacity: 0;
+                        transform: scale(0) translateY(50px);
+                        transition: 1s ease-in-out;
+                    }
+                }
+
+                .number {
+                    color: $red;
+                    font: 800 48px 'Roboto';
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .text  {
+                    text-align: center;
+                    font: 24px 'Roboto';
+                    height: 80px;
+                }
+
+                .circleWithImage {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    background: $coral;
+                    box-shadow: 0 0 5px $dark;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+
+                    img {
+                        min-width: 125px;
+                        max-width: 125px;
+
+                    }
+                }
             }
         }
     }
@@ -614,7 +626,7 @@ $dark: #272727;
                 content: "";
                 width: 100%;
                 height: 100vh;
-                background-color: rgba(201,26,3,0.3);
+                background-color: rgba(152, 27, 27, 0.4);
                 position: absolute;
                 top: 0;
             }
@@ -647,7 +659,7 @@ $dark: #272727;
         .screenTitle {
             font: $title;;
             text-align: center;
-            margin: 60px 0;
+            margin: 50px 0;
         }
 
         form {
@@ -1012,7 +1024,8 @@ $dark: #272727;
         }
 
         .downloadApp {
-            right: 100px;
+            right: 50px;
+            bottom: 100px;
 
             a {
                 width: 175px;
@@ -1020,8 +1033,8 @@ $dark: #272727;
         }
 
         .logoAndText {
-            padding-top: 100px;
-            padding-left: 100px;
+            padding-top: 50px;
+            padding-left: 60px;
 
             .logo {
                 width: 400px;
@@ -1045,26 +1058,32 @@ $dark: #272727;
     .secondScreen {
         .content {
             .mainContent {
-                padding: 50px 0;
+                display: flex;
+                align-items: center;
+                height: calc(100% - 200px);
+                padding: 0;
 
                 .text {
                     font: 24px 'Roboto';
                     margin-bottom: 30px;
                 }
 
-                .circleWithImage {
-                    width: 150px;
-                    height: 150px;
+                .colsWrapper {
+                    .circleWithImage {
+                        width: 150px;
+                        height: 150px;
 
-                    img {
-                        min-width: 100px;
-                        max-width: 100px;
+                        img {
+                            min-width: 100px;
+                            max-width: 100px;
+                        }
                     }
                 }
             }
 
             .screenTitle {
                 font: 800 36px "Roboto";
+                margin: 50px 0;
             }
         }
     }
@@ -1110,10 +1129,16 @@ $dark: #272727;
             }
         }
 
+        .backgroundImageBlock .mask {
+            display: none;
+        }
+
         .logoAndText {
             position: absolute;
-            top: 50px;
-            left: 100px;
+            top: 50%;
+            left: 50%;
+            padding: 0;
+            transform: translate(-50%, -50%);
 
             .logo {
                 width: 350px;
@@ -1136,6 +1161,16 @@ $dark: #272727;
 
         .downloadAppMobile {
             display: block;
+            height: auto;
+
+            a {
+                height: auto;
+                margin: 0;
+
+                &:first-child {
+                    margin: 0;
+                }
+            }
         }
 
         .downloadApp {
@@ -1156,14 +1191,15 @@ $dark: #272727;
                     font: 24px 'Roboto';
                     margin-bottom: 30px;
                 }
+                .colsWrapper {
+                    .circleWithImage {
+                        width: 150px;
+                        height: 150px;
 
-                .circleWithImage {
-                    width: 150px;
-                    height: 150px;
-
-                    img {
-                        min-width: 100px;
-                        max-width: 100px;
+                        img {
+                            min-width: 100px;
+                            max-width: 100px;
+                        }
                     }
                 }
             }
@@ -1171,6 +1207,132 @@ $dark: #272727;
             .screenTitle {
                 font: 800 36px "Roboto";
             }
+        }
+    }
+
+    .thirdScreen, .fourthScreen, .fifthScreen {
+        .content {
+            flex-direction: column;
+            padding: 30px;
+
+            .slider {
+                width: 430px;
+                height: 430px;
+
+                .sliderWrapper {
+                    .slide {
+                        height: 400px;
+
+                        .imageWrapper {
+                            width: 200px;
+                            height: 200px;
+                        }
+
+                        p {
+                            font: 28px "Roboto";
+                        }
+                    }
+                }
+            }
+
+            .SliderNavigation {
+                height: auto;
+                margin-bottom: 20px;
+
+                .sliderNav {
+                    width: 400px;
+                    flex-direction: row;
+
+                    .navItems {
+                        width: 75px;
+                        height: 75px;
+                        margin-bottom: 25px;
+                        margin-right: 30px;
+
+                        p {
+                            a {
+                                line-height: 75px;
+                            }
+                        }
+
+                        &.activeNavItem {
+                            width: 100px;
+                            height: 100px;
+
+                            p {
+                                a {
+                                    line-height: 100px;
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .screenTitle {
+                font: 800 36px "Roboto";
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .sixthScreen, .eighthScreen {
+
+        .carousel, .carousel2 {
+            width: 400px;
+        }
+
+        .content {
+            .carouselAndListBlock {
+                flex-direction: column;
+
+                .carouselWrapper {
+                    margin: 0 auto;
+                }
+
+                .decorationLine {
+                    width: 100%;
+                    height: 20px;
+                    margin: 0;
+
+                    .line {
+                        width: 100%;
+                        height: 10px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    .circle.first {
+                        left: 0;
+                    }
+
+                    .circle.last {
+                        left: auto;
+                        right: 0;
+                        transform: none;
+                    }
+
+                    .circle.second, .circle.third {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .carousel-cell img {
+            width: 400px;
+            height: 350px;
+        }
+    }
+
+    .seventhScreen {
+        .content .background img {
+            height: 100%;
         }
     }
 }
@@ -1409,7 +1571,6 @@ $dark: #272727;
             }
         }
     }
-
 
     .sixthScreen, .eighthScreen {
 

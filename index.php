@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="libs/bootstrap.min.css">
-    <link rel="stylesheet" href="libs/jquery.pagepiling.min.css">
+    <link rel="stylesheet" href="libs/Pagepiling/jquery.pagepiling.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -54,32 +54,32 @@
         </div>
         <div class="content">
             <h3 class="screenTitle">Почему стоит использовать наше приложение?</h3>
-            <div class="mainContent row">
+            <div class="mainContent">
+                <div class="colsWrapper">
+                    <div class="firstCol item">
+                        <p class="number">1</p>
+                        <p class="text">Ускорение взаимодействия с властью</p>
+                        <div class="circleWithImage"><img src="images/Rocket.png" alt="" class="rocket"></div>
+                    </div>
 
-                <div class="col firstCol">
-                    <p class="number">1</p>
-                    <p class="text">Ускорение взаимодействия с властью</p>
-                    <div class="circleWithImage"><img src="images/Rocket.png" alt="" class="rocket"></div>
+                    <div class="secondCol item">
+                        <p class="number">2</p>
+                        <p class="text">Постоянный мониторинг ситуаций</p>
+                        <div class="circleWithImage"><img src="images/Search.png" alt="" class="search"></div>
+                    </div>
+
+                    <div class="thirdCol item">
+                        <p class="number">3</p>
+                        <p class="text">Гибкая обратная связь</p>
+                        <div class="circleWithImage"><img src="images/Message.png" alt="" class="message"></div>
+                    </div>
+
+                    <div class="fourthCol item">
+                        <p class="number">4</p>
+                        <p class="text">Рейтинговая система заявок</p>
+                        <div class="circleWithImage"><img src="images/Rate.png" alt="" class="rate"></div>
+                    </div>
                 </div>
-
-                <div class="col secondCol">
-                    <p class="number">2</p>
-                    <p class="text">Постоянный мониторинг ситуаций</p>
-                    <div class="circleWithImage"><img src="images/Search.png" alt="" class="search"></div>
-                </div>
-
-                <div class="col thirdCol">
-                    <p class="number">3</p>
-                    <p class="text">Гибкая обратная связь</p>
-                    <div class="circleWithImage"><img src="images/Message.png" alt="" class="message"></div>
-                </div>
-
-                <div class="col fourthCol">
-                    <p class="number">4</p>
-                    <p class="text">Рейтинговая система заявок</p>
-                    <div class="circleWithImage"><img src="images/Rate.png" alt="" class="rate"></div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -450,9 +450,23 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    if (typeof(Flickity) === "undefined") { document.write("<script src='/libs/Flickity/flickity.pkgd.min.js'><\/script>"); }
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    if (typeof(jQuery) === "undefined") { document.write("<script src='/libs/jquery-3.6.0.min.js'><\/script>"); }
+</script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="libs/jquery.pagepiling.min.js"></script>
+<script>
+    if (typeof(Flickity) === "undefined") { document.write("<script src='/libs/Flickity/flickity.pkgd.min.js'><\/script>"); }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    if (typeof(axios) === "undefined") { document.write("<script src='/libs/axios.min.js'><\/script>"); }
+</script>
+<script src="libs/Pagepiling/jquery.pagepiling.min.js"></script>
 <script src="js/main.js"></script>
 
 <!--Start of Tawk.to Script-->
