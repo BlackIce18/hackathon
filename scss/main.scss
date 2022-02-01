@@ -180,6 +180,8 @@ $dark: #272727;
                 justify-content: center;
 
                 .firstCol, .secondCol, .thirdCol, .fourthCol {
+                    margin-right: 10px;
+
                     .number, .text {
                         opacity: 0;
                         transform: translateY(-20px);
@@ -1846,6 +1848,8 @@ $dark: #272727;
             position: absolute;
             top: 0;
             z-index: 2;
+            min-width: 130%;
+            max-width: 130%;
             height: 100%;
         }
 
@@ -1922,6 +1926,8 @@ $dark: #272727;
                     margin-bottom: 30px;
                 }
                 .colsWrapper {
+                    margin-bottom: 50px;
+
                     .circleWithImage {
                         width: 150px;
                         height: 150px;
@@ -1972,11 +1978,13 @@ $dark: #272727;
                 .sliderNav {
                     width: 400px;
                     flex-direction: row;
+                    justify-content: center;
+                    margin-bottom: 10px;
 
                     .navItems {
                         width: 75px;
                         height: 75px;
-                        margin-bottom: 25px;
+                        margin-bottom: 0px;
                         margin-right: 30px;
 
                         p {
@@ -2049,6 +2057,10 @@ $dark: #272727;
                     .circle.second, .circle.third {
                         display: none;
                     }
+                }
+
+                .applicationsList {
+                    margin-bottom: 50px;
                 }
             }
         }

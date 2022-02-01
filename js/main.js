@@ -32,12 +32,13 @@ function ScrollOneWindow() {
             'position': 'right',
             'tooltips': ['section1', 'section2', 'section3', 'section4']
         }*/,
-        normalScrollElements: null,
+        normalScrollElements: "#map",
         normalScrollElementTouchThreshold: 5,
         touchSensitivity: 5,
         keyboardScrolling: true,
         sectionSelector: '.screen',
         animateAnchor: false,
+
 
         //events
         onLeave: function(index, nextIndex, direction){
