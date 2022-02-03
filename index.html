@@ -17,6 +17,33 @@
     </script>
 </head>
 <body>
+
+<!--<?php
+require 'vendor/autoload.php';
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Request;
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => 'http://164.92.215.12:8644/requests',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+?>-->
+
+
 <div id="main">
     <section class="firstScreen screen background pp-scrollable">
 
@@ -177,16 +204,13 @@
                     <div class="wrapperFlex">
                         <div class="carousel">
                             <div class="carousel-cell">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                                <img src="images/Requests/7cYFLFS9pKA.jpg" alt="" />
                             </div>
                             <div class="carousel-cell">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
-                            </div>
-                            <div class="carousel-cell">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                                <img src="images/Requests/DGxLgnxKMe8.jpg" alt="" />
                             </div>
                         </div>
-                        <div class="applicationNumber">№00000001</div>
+                        <div class="applicationNumber">№00000004</div>
                     </div>
                 </div>
 
@@ -200,46 +224,65 @@
 
                 <div class="applicationsList">
                     <ul>
+                        <!--<?php
+                            echo '<li class="applicationItem">
+                                <div class="applicationImageAndDate">
+                                    <div class="imageWrapper">
+                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="">
+                                    </div>
+                                    <p class="date">
+                                    </p>
+                                </div>
+                                <div class="applicationText">
+                                    <p class="title">
+                                        <a href"#">
+                                            <span class="rating">
+
+                                            </span>
+                                        </a>
+                                    </p>
+                                    <p class="description">
+
+                                    </p>
+                                </div>
+                                </li>';
+                        ?>-->
                         <li class="applicationItem">
                             <div class="applicationImageAndDate">
                                 <div class="imageWrapper">
-                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                                    <img src="images/Requests/7cYFLFS9pKA.jpg" alt="orange tree" />
                                 </div>
-                                <p class="date">01.01.2022</p>
+                                <p class="date">31.01.2022</p>
                             </div>
                             <div class="applicationText">
-                                <p class="title"><a href="#">№00000000 Название категории <span class="rating">(рейтинг 500)</span></a></p>
-                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                                <p class="title"><a href="#">№00000004 Нарушение ПДД участниками дорожного движения<span class="rating">(рейтинг 500)</span></a></p>
+                                <p class="description">ДТП на пересечении ул. Университетской и пр. Богдана Хмельницкого.
+                                    Из-за ДТП временно приостановлено движение троллейбусов по маршруту №14.
+                                    Есть пострадавшие.</p>
                             </div>
                         </li>
                         <li class="applicationItem">
                             <div class="applicationImageAndDate">
                                 <div class="imageWrapper">
-                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+                                    <img src="images/Requests/nBP1UT1u24E.jpg" alt="" />
                                 </div>
-                                <p class="date">01.01.2022</p>
+                                <p class="date">29.01.2022</p>
                             </div>
                             <div class="applicationText">
-                                <p class="title"><a href="#">№00000001 Название категории <span class="rating">(рейтинг 500)</span></a></p>
-                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                                <p class="title"><a href="#">№00000005 Скопление животных <span class="rating">(рейтинг 340)</span></a></p>
+                                <p class="description">В соцсетях сообщают, что в Макеевке в Ханженково вчера собаки чуть не загрызли и сильно искусали маленькую девочку. Ребенок находится в больнице, состояние неизвестно.</p>
                             </div>
                         </li>
                         <li class="applicationItem">
                             <div class="applicationImageAndDate">
                                 <div class="imageWrapper">
-                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                                    <img src="images/Requests/lZpCtuGDRW0.jpg" alt="" />
                                 </div>
-                                <p class="date">01.01.2022</p>
+                                <p class="date">28.01.2022</p>
                             </div>
                             <div class="applicationText">
-                                <p class="title"><a href="#">№00000002 Название категории <span class="rating">(рейтинг 500)</span></a></p>
-                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                                <p class="title"><a href="#">№00000006 Другое <span class="rating">(рейтинг 270)</span></a></p>
+                                <p class="description">В ТЦ "Континент" тоже прошла эвакуация. Сейчас он перекрыт.</p>
                             </div>
                         </li>
                     </ul>
@@ -282,13 +325,13 @@
                     <div class="wrapperFlex">
                         <div class="carousel2">
                             <div class="carousel-cell">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                                <img src="images/Requests/9fbch3vMBgY.jpg" alt="" />
                             </div>
                             <div class="carousel-cell">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+                                <img src="images/Requests/auPvhA21BxE.jpg" alt="" />
                             </div>
                             <div class="carousel-cell">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                                <img src="images/Requests/A30kbPcfnv8.jpg" alt="" />
                             </div>
                         </div>
                         <div class="applicationNumber">№00000001</div>
@@ -308,43 +351,37 @@
                         <li class="applicationItem">
                             <div class="applicationImageAndDate">
                                 <div class="imageWrapper">
-                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+                                    <img src="images/Requests/9fbch3vMBgY.jpg" alt="" />
                                 </div>
-                                <p class="date">01.01.2022</p>
+                                <p class="date">02.02.2022</p>
                             </div>
                             <div class="applicationText">
-                                <p class="title green"><a href="#">№00000000 Название категории <span class="rating">(рейтинг 500)</span></a></p>
-                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                                <p class="title green"><a href="#">№00000001 Состояние рабочего места <span class="rating">(рейтинг 730)</span></a></p>
+                                <p class="description">Выполнили ремонтные работы силами наших строительных бригад в МДОУ "ЯСЛИ-САД №8 "ЯБЛОНЬКА" п. Красный Партизан.</p>
                             </div>
                         </li>
                         <li class="applicationItem">
                             <div class="applicationImageAndDate">
                                 <div class="imageWrapper">
-                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+                                    <img src="images/Requests/2kWN9XCvAwQ.jpg" alt="" />
                                 </div>
                                 <p class="date">01.01.2022</p>
                             </div>
                             <div class="applicationText">
-                                <p class="title green"><a href="#">№00000001 Название категории <span class="rating">(рейтинг 500)</span></a></p>
-                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                                <p class="title green"><a href="#">№00000002 Состояние рабочего места <span class="rating">(рейтинг 510)</span></a></p>
+                                <p class="description">Выполнили ремонтные работы в МОУ "Школа №3 г.Ясиноватая" силами наших строительных бригад.</p>
                             </div>
                         </li>
                         <li class="applicationItem">
                             <div class="applicationImageAndDate">
                                 <div class="imageWrapper">
-                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+                                    <img src="images/Requests/lZpCtuGDRW0.jpg" alt="" />
                                 </div>
-                                <p class="date">01.01.2022</p>
+                                <p class="date">28.01.2022</p>
                             </div>
                             <div class="applicationText">
-                                <p class="title green"><a href="#">№00000002 Название категории <span class="rating">(рейтинг 500)</span></a></p>
-                                <p class="description">Краткое описаниеКраткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описание
-                                    Краткое описаниеКраткое описаниеКраткое описаниеКраткое</p>
+                                <p class="title green"><a href="#">№00000006 Другое <span class="rating">(рейтинг 270)</span></a></p>
+                                <p class="description">В ТЦ "Континент" тоже прошла эвакуация. Сейчас он перекрыт.</p>
                             </div>
                         </li>
                     </ul>
